@@ -1,0 +1,37 @@
+﻿
+
+.right-list{float: left;
+width: 510px;
+overflow: hidden;}
+
+.right-list ul{margin:0 0 10px 0;padding:0;list-style: none;}
+.right-list ul li{float:left; margin:0px; padding-bottom:10px; list-style: none; }
+.right-list .khung-tin-sau{float:left;margin-top:18px; margin-bottom:0px; padding-bottom:18px; width:100%; border-bottom:1px solid #d8d8d8;}
+.right-list .khung-tin-sau .images img{float:left;margin-left:0px;margin-right:10px; border:1px solid #d8d8d8; padding:4px;}
+.right-list .khung-tin-sau .title{ width:484px;}
+.right-list .khung-tin-sau .title a{color:#ef5521;font-size:1.3em;font-weight:bold;text-decoration:none;}
+.right-list .khung-tin-sau .lead{color:#2d2d2d;padding:0 10px 0 0;height:auto;font:12px/20px arial; text-align:justify;}
+.itemscope {
+display: block;
+}
+
+.content-content .item-list .title-dep{position: absolute;bottom: 20px;background: url(/Design/imgnew/bg-deptitle.png) repeat;padding: 8px 10px;margin: 0px 5px;width:90%;}
+.content-content .khung-tin-dau .title-dep a{color: #FFF;font-size: 1.3em;font-weight: bold;text-decoration: none;}
+.content-content .khung-tin-hot-dep{float:right; width:208px; padding-left:10px; min-height:188px;padding-top:5px;max-height: 420px;overflow: hidden;}
+.content-content .khung-tin-hot-dep ul li{float: left;margin: 0px;width: 100%;padding: 8px 0px 5px 0px;list-style: none;background: none;min-height: 72px;}
+.content-content .views-field-title-dep a{color: #f46c29;font-size: 14px;font-weight: bold;text-decoration: none;}
+.content-content .views-field-title-dep a img{float: left;border: 1px solid #ddd;margin-right: 8px;padding:4px;margin-bottom:8px;}
+
+.content-content .item-list ul.mua-sam{overflow: hidden;width: 520px;margin:0;padding:0;}
+.content-content .item-list ul.mua-sam li{float:left;width:250px;border:1px solid #d8d8d8;margin-right:6px;}
+.content-content .item-list ul.mua-sam li h2{background:#f94a1c;padding:8px 10px;min-height:42px;}
+.content-content .item-list ul.mua-sam li h2 a{color:#fff;font-size:16px;font-weight:bold;text-decoration:none;line-height:20px;}
+.content-content .item-list ul.mua-sam li img{padding:4px;}
+
+.content-content .item-list ul.tam-su{overflow: hidden;width: 520px;margin:0;padding:0;}
+.content-content .item-list ul.tam-su li{float:left;width:246px;border:1px solid #d8d8d8;border-radius:5px;margin-right:12px;margin-bottom:10px;height:329px;overflow:hidden;}
+.content-content .item-list ul.tam-su li h3{padding:8px 10px;}
+.content-content .item-list ul.tam-su li h3 a{color:#ef5521;font-size:15px;font-weight:bold;text-decoration:none;line-height:20px;}
+.content-content .item-list ul.tam-su li img{padding:9px;}
+.content-content .item-list ul.tam-su li span{color:#ef5521;font-size:12px;font-weight:normal;padding:0px 10px;}
+.content-content .item-list ul.tam-su li p{color:#333;font-size:12px;font-weight:normal;line-height:20px;padding:0px 10px;}

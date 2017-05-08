@@ -1,0 +1,13 @@
+/* JS */ gapi.loaded_2(function(_){var window=this;
+_.Sm.qa("ytsubscribe",function(a,c){var f=_.Sm.G;f&&_.Sm.wc({role:"ytsubscribe",iframe:f,data:c},{role:"ytrelay",iframe:a})},void 0,_.Vz);
+_.xw=function(a,c){c||(c={});var f=window,g="undefined"!=typeof a.href?a.href:String(a),h=c.target||a.target,l=[],n;for(n in c)switch(n){case "width":case "height":case "top":case "left":l.push(n+"="+c[n]);break;case "target":case "noreferrer":break;default:l.push(n+"="+(c[n]?1:0))}l=l.join(",");if(c.noreferrer){if(f=f.open("",h,l))_.W&&-1!=g.indexOf(";")&&(g="'"+g.replace(/'/g,"%27")+"'"),f.opener=null,g=(0,_.He)(g),f.document.write('<META HTTP-EQUIV="refresh" content="0; url='+g+'">'),f.document.close()}else f= f.open(g,h,l);return f};
+
+_.nW=function(){var a=_.We;return!!a&&0<=a.indexOf("CriOS")};_.oW=function(){var a=_.We;return!!a&&0<=a.indexOf("iPhone")&&0<=a.indexOf("Safari")&&-1==a.indexOf("CriOS")};_.NA=function(a,c){var f=/^https:\/\/([^\/]+\.google\.com)\//.exec(a);f&&-1!=["plus.google.com","plus.sandbox.google.com"].indexOf(f[1])&&(f=c||{},f.noreferrer=!0,(f=(0,_.xw)(a,f))&&f.focus())};
+
+var QL,RL;
+(function(){var a=null,c=null,f={0:"comments"};f[1]={href:[_.Zc],view_type:[null],query:[null],width:[null],pinned_comment:[null],owner_id:[null],first_party_property:[null],legacy_comment_moderation_url:[null]};var g=function(a,f,g){var h=(0,_.sg)((0,_.kg)(c)).y;f&&(0,_.oW)()&&(h-=60);var l=(0,_.ig)().height,A=(0,_.Jf)(window.document).y;a=h+a;if(a<A||a>A+l||g)g=a,f&&(g-=l),(0,_.Kf)(window.document).scrollTop=g};f[3]={onfirsttimeplusonepromo:!0,onallcommentsclicked:!0,onfirsttimecommenter:!0,onhidefirsttimecommenterpromo:!0,
+ontimestampclicked:!0,onshownotification:!0,onthumbsup:!0,onupgradeaccount:!0,scroll:function(){return g},openwindow:function(){return(0,_.nW)()?_.NA:void 0}};var h=function(){if(c){var a=window.document.getElementById(c);a&&a.parentNode&&a.parentNode.parentNode&&(a.style.width=a.parentNode.parentNode.offsetWidth+"px")}},l=function(){a&&(a.U&&a.U(),c=a=null,window.removeEventListener?window.removeEventListener("resize",h):window.detachEvent&&window.detachEvent("onresize",h))};f[5]=function(f,g){"e"==
+f&&(l(),a=g[5],c=a.Hh(),window.addEventListener?window.addEventListener("resize",h):window.attachEvent&&window.attachEvent("onresize",h))};(0,_.iC)(f);QL=l;RL=function(c){a.send("createComment",{content:c},null,_.Vz)}})();(0,_.e)("gapi.comments.createComment",RL);(0,_.e)("gapi.comments.dispose",QL);
+
+});
+// Google Inc.

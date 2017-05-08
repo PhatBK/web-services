@@ -1,0 +1,61 @@
+var TakaTaka = TakaTaka || {};
+TakaTaka.appendStyle = function(){
+	var h = document.getElementsByTagName('head')[0],
+		s = document.createElement('style'),
+		css = '#teaserads iframe { border: none; width: 100%; height: 552px; }';
+	s.type = 'text/css';
+	if (s.styleSheet)
+	{
+		s.styleSheet.cssText = css;
+	}
+	else
+	{
+		s.appendChild(document.createTextNode(css));
+	}
+	h.appendChild(s);
+};
+TakaTaka.appendFrame = function(abid){
+try {
+	var listener = function(event){
+		if (!(event.data.abid && event.data.fheight)) return false;
+		var abid_iframe = event.data.abid,
+			fheight = event.data.fheight;
+		document.getElementById(abid_iframe).style.height = parseInt(fheight) + 2 + 'px';
+	};
+
+	if (window.addEventListener){
+		addEventListener("message", listener, false)
+	} else {
+		attachEvent("onmessage", listener)
+	}
+
+	var step = 55,
+		limit = 1750,
+		container = null,
+		i = setInterval(function(){
+			if (container = document.getElementById('teaserads'))
+			{
+				try {
+					clearInterval(i);
+					var iframe = document.createElement('iframe');
+					iframe.src = 'http://searcher.takataka.coccoc.com/searcher/frame/default?abid='+abid;
+					iframe.scrolling = 'no';
+					iframe.frameborder = 'no';
+					iframe.frameBorder = 0;
+					iframe.marginheight = 0;
+					iframe.marginwidth = 0;
+					iframe.id = abid;
+					container.appendChild(iframe);
+				} catch (e) {};
+			}
+			else if (limit < 0)
+			{
+				clearInterval(i);
+				return false;
+			}
+			limit-=step;
+	}, step);
+} catch (e) { };
+};
+TakaTaka.appendStyle();
+TakaTaka.appendFrame('f86eb01fc368dc9946820311914d8cc5');

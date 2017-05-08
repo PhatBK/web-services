@@ -1,0 +1,195 @@
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,th,td{margin:0;padding:0;}img,body,html{border:0;}address,caption,cite,code,dfn,th,var{font-style:normal;font-weight:normal;}ol,ul {_list-style:none;}caption{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;}q:before,q:after{content:'';}
+
+#tabs_wrapper {
+    width: 623px;
+}
+#tabs_container {
+}
+#tabs {
+    overflow: hidden;
+    height:28px;
+    margin-left: 35px;
+margin-top: 5px;
+}
+#tabs li {
+    display: inline;
+}
+#tabs li a {
+    text-decoration: none;
+    color:#fff;
+    display: block;
+    float:left;
+    font-weight:bold;
+    padding:1px 5px 0px 5px;
+    text-transform:uppercase;
+}
+#tab_home div.top-col-right h1{
+    padding-left: 3px!important;
+    padding-top: 3px!important;
+}
+#tabs li a:hover {    
+    color:#fff;
+    height: 23px;
+}
+#tabs li.active a {
+    color:#fff;
+    height: 23px;
+}
+#page-product #tabs_container{
+    height:30px!important;
+}
+#page-product #tabs li.active a {
+ 
+}
+#page-product #tabs li a {
+    text-decoration: none;
+    border-bottom: none;
+    color:#333333;
+    display: block;
+    float:left;
+    font-size:11px;
+    padding:9px 15px 9px!important;
+    border-right:none!important;
+}
+#page-product #tabs_container{
+    background: none repeat scroll 0 0 transparent!important;
+    margin: 0 auto!important;
+    width: 625px !important;
+}
+#page-product .tab_content{
+    border:1px solid #dddddd!important;
+    width:625px!important;
+    margin:0px auto!important;
+}
+#page-product #tabs_content_container{
+    border-top: none!important;
+
+}
+#tabs li.active a:hover{
+}
+
+#tabs_content_container{
+}
+.tab_content {
+    display: none;
+    text-align: left;
+    min-height: 28px;
+}    
+
+#tab1 .img-product-details{
+ float:right;
+}
+
+#tab1 .img-product-details h2{
+
+}
+
+#tab1 .img-product-details img.main{
+
+    }
+#tab1 div.tab_content_details p{
+
+}   
+#tab1 div.item_img_tab_list ul{
+
+} 
+#tab1 div.item_img_tab_list ul li{
+
+}
+#tab1 div.item_img_tab_list ul li img{
+
+    }
+    
+div.tab_content_details div{
+
+}    
+
+div.tab_content div{
+
+}
+
+div.item_img_tab_list ul li{
+    list-style: none;
+}
+/*tooltip*/
+a.tooltip {outline:none; }
+    a.tooltip strong {line-height:30px;}
+    a.tooltip:hover {text-decoration:none;} 
+    a.tooltip span {
+        z-index:10;display:none; padding:14px 20px;
+        margin-top:-15px; margin-left:10px;
+        width:240px; line-height:16px;
+    }
+    a.tooltip:hover span{
+        display:inline; position:absolute; color:#111;
+        border:1px solid #DCA; background:#fffAF0;}
+    .callout {z-index:20;position:absolute;top:10px;border:0;left:-12px;}
+    
+    /*CSS3 extras*/
+    a.tooltip span
+    {
+        border-radius:4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        
+        -moz-box-shadow: 5px 5px 8px #CCC;
+        -webkit-box-shadow: 5px 5px 8px #CCC;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+/*giai tri*/
+    .sliderwrapper{
+position: relative; /*leave as is*/
+overflow: hidden; /*leave as is*/
+margin-left: 3px;
+width: 291px; /*width of featured content slider*/
+height: 270px;
+overflow-y:scroll;
+}
+
+.sliderwrapper .contentdiv{
+visibility: hidden; /*leave as is*/
+position: absolute; /*leave as is*/
+left: 0;  /*leave as is*/
+top: 0;  /*leave as is*/
+padding: 5px;
+background: white;
+width: 276px; /*width of content DIVs within slider. Total width should equal slider's inner width (390+5+5=400) */
+height: 190px;
+filter:progid:DXImageTransform.Microsoft.alpha(opacity=100);
+-moz-opacity: 1;
+opacity: 1;
+
+padding: 5px;
+}
+.sliderwrapper .contentdiv p{
+    padding-right: 10px;
+    }
+
+.pagination{
+    margin-left: 3px;
+width: 267px; /*Width of pagination DIV. Total width should equal slider's outer width (400+10+10=420)*/
+text-align: right;
+padding: 5px 10px;
+}
+
+.pagination a{
+padding: 0 5px;
+text-decoration: none; 
+color: red;
+background: white;
+font-weight: bold;
+}
+
+.pagination a:hover, .pagination a.selected{
+color: #000;
+background-color: #fff;
+}
+
+
+div.contentdiv {
+    font-size: 13px;
+    line-height: 20px;
+}
+.tab-top-new-10{
+    float:left; width:100%; margin-top:4.7px;
+}

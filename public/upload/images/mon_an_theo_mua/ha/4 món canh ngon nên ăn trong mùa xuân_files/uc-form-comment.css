@@ -1,0 +1,88 @@
+﻿    /*box y kien*/
+#footer_cmt{background: url(/file/img/footer_cmt.jpg) no-repeat center top;width:510px;height:25px;margin:0px;overflow:hidden;float:left;text-align:center}
+.othernews-header-fb{background:#e8e8e8;width:510px;height:27px;margin:0px;overflow:hidden;float:left}
+.othernews-title {padding-right: 5px;font: bold 14px arial;color: #8A0000;background-color: #F5F5F7;}
+#divOutComment{overflow: hidden;margin: 0px;padding: 0px;width: 510px;float:left;background-color: #f4f5f6}
+.ovf {overflow: hidden;}
+.comment_ct_fb {position: relative;padding: 10px 0px 0px;}
+#cmthidden{padding-top:10px}
+.cmw {padding: 10px;}
+.cmww {padding-left: 10px;padding-right: 10px;padding-top:2px;background-color:#fff}
+.cmwwo{padding-left: 10px;padding-right: 10px;padding-top:2px;background-color:#f4f5f6}
+#divOutComment .Normal {font-family: 'Arial';font-size: 9pt;color: black;line-height:18px}
+#divOutComment .normal {font-family: 'Arial';font-size: 9pt;color: black;line-height:18px}
+#divOutComment p {margin: 0px 0px;}
+#divOutComment .Author {font-family: 'Arial';font-size: 9pt;color: #666;font-weight: 700;float: left;}
+#divOutComment .CommSep {font-family: 'Arial';font-size: 9pt;color: #666;font-weight: normal;float: left;}
+#divOutComment .CommDate {font-family: 'Arial';font-size: 9pt;color: #666;font-weight: normal;float: left;}
+.cmntlike {height: 15px;float: right; padding-right:10px;}
+.alike{cursor:pointer; color:#848484;font:11px Arial}
+.alike .likecount {
+background: url(/file/img/cmntlike.png) no-repeat 0 1px;
+text-indent: 16px;
+}
+.alike .likecount, .alike .likecount0 {
+font-family: arial;
+font-size: 11px;
+color: #727272;
+margin-top: 1px;
+}
+.cmntlike a span {
+margin: 0;
+}
+.fl {
+float: left;
+}
+
+.box-comment{float:left;width:505px;padding-left:5px;background:#f4f5f6 url(/file/img/bg_comment.gif) repeat-x 0px 0px;}
+.formcmt_btn{width:495px;text-align: right;padding-top:7px;margin-bottom:5px;float:left;height:20px;overflow:hidden}
+.borml{padding-top:4px;background-color:white;padding-left:4px}
+.borml textarea {width: 480px;float: left;font: 12px arial;color: #9F9F9F;border: none;background: white;}
+#formcmt{width:495px;float:left;overflow:hidden;padding-top:10px;padding-left:2px}
+.fl{float:left}
+#cmttop{float:left;height:4px;overflow:hidden}
+.cmttop_left,.cmttop_right,.cmtbottom_left,.cmtbottom_right{background: url("/file/img/bordercmt.jpg") no-repeat;overflow:hidden}
+.cmttop_midd,.cmtbottom_midd{background: url("/file/img/bordercmt1.jpg") repeat-x 0 0 white;overflow:hidden}
+.expand{min-height:20px;height: 50px; overflow: hidden; padding-top: 0px; padding-bottom: 0px;overflow: hidden}
+.cmttop_left{background-position: 0px 0px;height:4px;width:4px;}
+.cmttop_midd{background-position: 0px 0px;height:4px;width:486px;}
+.cmttop_right{background-position: -10px 0px;height:4px;width:2px;}
+
+.cmtbottom_left{background-position: 0px -9px;height:3px;width:4px;}
+.cmtbottom_midd{background-position: 0px -4px;height:3px;width:486px;}
+.cmtbottom_right{background-position: -10px -9px;height:3px;width:2px;}
+.cmtmidd_midd{width:490px;min-height:20px;overflow:hidden}
+.cmtbottom{float:left}
+#cmtmidd{border-left:1px solid #bcbdbe;float:left;background-color:white;border-right:1px solid #bcbdbe;overflow:hidden}
+		
+.likecount1{font-family: arial;font-size: 11px;color: #990000;margin-top: 1px;}
+
+.modalBackground
+    {
+        background-color: #555;
+        filter: alpha(opacity=30);
+        opacity: 0.8;
+        z-index: 100!important;;
+    }
+.btnSend{cursor:pointer;width:91px;height:30px; border:0px; padding-right:2px; color:#fff; background:#9a1f44;}
+.btnCancel{cursor:pointer;width:91px;height:30px; border:0px; padding-right:2px; color:#fff; background:#666666;}
+/*CollectionPager*/
+div.CollectionPager{height:30px; line-height:30px; text-align:right; color:#00a2e3;}
+div.CollectionPager span img{padding:5px 10px 0px 5px; margin-top:5px;}
+div.CollectionPager a{color:#404040; font-weight:bold; padding-top:-10px; text-decoration:none; padding:0 5px 0 5px}
+div.CollectionPager a:hover{color:#00a0e6;text-decoration:none;}
+
+#SexyAlertBox-Buttons {
+color: #afafaf;
+font: 11px arial;
+}
+
+    .input-lh2{border:1px solid #ccc;padding:3px;width:280px;float:left;margin:3px}
+    .input-lh3{border:1px solid #ccc;padding:3px;width:98%;height:90px;float:left;margin:3px}
+    .input-button{padding:3px;float:left;margin:3px}
+    .fc-cotent{width:670px;margin:0;padding:0;overflow:hidden;float:left;margin-top:10px}
+    .fc-cotent h2{color:#333;font-size:16px}
+    .fc-node-form{width:100%;margin-bottom:10px;overflow:hidden}
+.div-show-comment{padding-top:9px;float: left;width:100%}
+.loading_ovf uc-loading-ovf{background-color:#f4f5f6;padding:0px 10px;min-height: 30px;display:none}
+.div-comment-btm-paging{float:right; margin-top:0px;width:60%}

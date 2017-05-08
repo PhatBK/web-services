@@ -1,0 +1,81 @@
+﻿.wpnads_clear {
+            clear: both;
+            }
+        .wpnads_advtitle, .wpnads_widget .wpnads_content{
+            overflow: hidden;
+            }
+        .wpnads_widget * {
+            font-family: tahoma, arial;
+            font-size: 11px;
+            }            
+        .wpnads_widget {
+            box-shadow: 0 1px 2px #ddd;
+            -webkit-box-shadow: 0 1px 2px #ddd;
+            -moz-box-shadow: 0 1px 2px #ddd;
+            background-color: #fff;position: relative;
+            overflow: hidden;padding-bottom: 5px;border: 1px solid #dddddd;
+            }
+        .wpnads_widget a {
+            text-decoration: none;
+            }
+        .wpnads_widget .ads_add_top {
+            float: left;
+            padding: 2px 0 0 5px;            
+            }
+        .wpnads_widget .ads_add a, .wpnads_widget .ads_add_top a {
+            font-size: 10px;
+            line-height: 15px;
+            color: #c70909;
+            }
+        .wpnads_widget .ads_by {
+            float: right;
+            font-size: 0;
+            text-align: right;
+            }
+        .wpnads_widget .wpnads_content {
+            padding: 0 5px;
+            float: left;
+            line-height: 15px;
+            overflow: hidden;
+            }
+        .wpnads_cell {
+            display: table-cell;
+            vertical-align: middle;
+            }
+        .wpnads_title_product {
+            margin-bottom: 5px;
+            }
+        .wpnads_title_product p {
+            margin: 0px;
+            text-align: left;
+            font-weight:bold;
+            }
+        .wpnads_title_product p a {
+            display: inline-block;
+            line-height: 15px;
+            text-align: left;
+            }        
+        .wpnads_diptable {            
+            width: 90px;
+            border: 1px solid #cccccc;
+            padding: 1px;
+            background-color: #FBF9FA;float: left; margin-right: 5px; overflow: hidden; display: block;
+            }
+        .wpnads_info_product {
+            line-height: 15px;            
+            word-break: break-word;
+            text-align: left;
+            overflow: hidden;
+            }
+        .wpnads_info_product p.wpnads_price {
+            margin: 2px 0 0;
+            font-weight: bold;
+            color: #f00f00;
+            }
+        .wpnads_break_module_line {
+            height: 1px;
+            margin: 5px 0px 4px;
+            float: left;
+            width: 100%;
+            border-top: 1px dotted #dddddd;
+            }

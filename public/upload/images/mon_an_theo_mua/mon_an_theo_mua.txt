@@ -1,0 +1,11 @@
+﻿1|Canh củ cải trắng nấu với thịt nạc xay|25000|-1 củ cải trắng vừa ăn<br/>- 200g thịt nạc xay hay thịt gà xay<br/>- Hành khô, í nhánh hành lá, rau mùi, hạt nem, hạt tiêu|canh-cu-cai-trang.jpg|xuan
+2|Canh gà nấu đậu phụ và rau của|30000|- 1/2 hộp đậu phụ non<br/>- 1-2 cái đùi gà<br/>- 1 củ cà rốt<br/>- 200g hạ đậu Hà lan<br/>- Muối, hạt tiêu, đường, vài nhánh hành lá.|canh-ga-nau-dau-phu.jpg|xuan
+3|Canh bắp cải nấu với thịt bò|25000|- 1/4 cây bắp cải<br/>- 200g thịt bò<br/>- Muối, nước mắm, hạt tiêu, vài nhánh hành lá, mùi tàu, hạt nêm, tỏi.|canh-bap-cai-nau-thit-bo.jpg|xuan
+4|Canh bò viên nấu khoai môn|20000|- 300g bò viên, bạn có thể mua sẵn tại siêu thị<br/>- 200g khoai môn<br/>- Vài nhánh mùi tàu, hành lá, muối, hạt nêm.|canh-bo-vien-nau-khoai-mon.jpg|xuan
+5|Canh mướp nấu tôm|25000|- Mướp hương: 02 quả<br/>- Tôm: 200 g<br/>- Nấm đông cô: 10 tai<br/>- Hành tím: 1 củ<br/>- Hành hoa: 1 nhánh<br/>- Nước dùng gà (xương) nếu thích<br/>- Gia vị: dầu ăn, bột nêm, mì chính.|canh-muop-nau-tom.jpg|ha
+6|Canh bầu nấu trai|20000|- Con trai: 1kg<br/>- Bầu non: nửa quả<br/>- Cà chua: 4 quả<br/>- Hành, răm<br/>- Me chua|canh-bau-nau-trai.jpg|ha
+7|Canh tôm nấu rau dền, mồng tơi|40000|- 1 bó rau dền<br/>- 1 bó rau mồng tơi<br/>- 50g tôm khô (nếu thích có thể cho ít sò điệp khô cho ngọt hơn)<br/>- Ít hành lá<br/>- Cà pháo, mắm tôm.|canh-tom-mong-toi.jpg|ha
+8|Canh rau ngót nấu nõn tôm|20000|- Tôm nõn khô: 20gr<br/>- Rau ngót: 2 mớ|canh-rau-ngot.jpg|ha
+9|Cánh gà om dầu mè|80000|Cánh gà, <br/>-tỏi,<br/>- gừng,<br/>- vừng rang chín,<br/>- dầu hào,<br/>- dầu mè…|canh-ga-om-dau-me.jpg|thu
+10|Sườn om nước dừa|40000|Chị em lưu ý trước khi chế biến, rửa sạch sườn, chặt miếng vừa ăn. Cho sườn vào nồi rồi đổ nước ngập mặt sườn, đun sôi. Nước sôi, hớt bọt đi, rửa sườn lại một lần nữa bằng nước lã cho sạch. Nếu không chần qua như thế, sườn có thể sẽ hôi làm mất đi phần hấp dẫn của món ăn.|suon-om-nuoc-dua.jpg|thu
+11|Cá thu om nước dừa|30000|- Sườn: 500gr<br/>- Nước dừa: 1 quả<br/>- Cùi dừa: 100gr (hoặc tùy thích)<br/>- Hành khô, tỏi, hành lá, hạt tiêu, hạt nêm, gia vị, dầu hào, đường, mắm.|ca-thu-om-nuoc-dua.jpg|thu

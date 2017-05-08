@@ -1,0 +1,290 @@
+@font-face {
+	font-family: 'UTM_Swiss';
+	src: url('../font/173_VECTORDEP.VN_UTM SWISS CONDENSED.TTF');
+	src: local('173_VECTORDEP.VN_UTM SWISS CONDENSED'), url('../font/173_VECTORDEP.VN_UTM SWISS CONDENSED.TTF') format('truetype'), url('../font/UTM SWISS 721 BLACK CONDENSED.TTF') format('truetype'), url('..font/173_VECTORDEP.VN_UTM SWISS CONDENSED.TTF') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'UTM_Swiss_2';
+	src: url('../font/UTM SWISS 721 BLACK CONDENSED.TTF');
+	src: local('UTM SWISS 721 BLACK CONDENSED'), url('../font/UTM SWISS 721 BLACK CONDENSED.TTF') format('truetype'), url('../font/UTM SWISS 721 BLACK CONDENSED.TTF') format('truetype'), url('..font/173_VECTORDEP.VN_UTM SWISS CONDENSED.TTF') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+#mainNav {
+    float:left; 
+    width:1010px; 
+    height:auto; 
+    background: url(/design/imgnew/bg-mainnav.png) left top no-repeat;
+    position:relative; 
+    height:38px;
+    /*box-shadow: 0 2px 2px #444444;*/
+    margin-left: 10px;
+}
+
+#mainNav .select {margin:0; padding:0; list-style:none; display:block;}
+
+#mainNav li {display:inline; margin:0; padding:0;height:auto;}
+
+#mainNav .select a {
+    background: url(/design/imgnew/a-active.png) right top no-repeat;
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    font-family: UTM_Swiss;
+    font-size: 15.5px;    
+    height: 33px;
+    line-height: 27px;
+    margin-left: 0;
+    padding: 5px 11px 0px 9px;
+    text-decoration: none;
+    white-space: nowrap; 
+}
+#mainNav .select a.parent613{background:none;}
+#mainNav .select a.a-home {
+    background: none;
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    font-family: UTM;
+    font-size: 13px;
+    font-weight: bold;
+    height: 33px;
+    line-height: 27px;
+    margin-left: 0;
+    padding: 5px 30px 0;
+    text-decoration: none;
+    white-space: nowrap; 
+}
+
+* html #mainNav .select a, * html #mainNav .current a {width:1px;}
+#mainNav li:hover, #main li.select {
+  color:#fff;
+}
+#mainNav li:hover a{
+  color:#fff;
+}
+
+
+#mainNav .current a{
+    color:#fff;
+}
+
+/*#f1f5ff*/
+#mainNav .sub{
+    height:31px;
+    display:none; 
+    position:absolute; 
+    color:#fff; 
+    top:40px; 
+    left:0; 
+    background:#f2f1ef; /*url(/design/imgnew/bg-sub-mainnav.png) left top no-repeat;*/
+    margin-top:1px; 
+    padding:0; 
+    z-index:1;
+    font-family:Arial; 
+    font-size:11px;
+    width: 100%;  
+    line-height:20px;  
+}
+#mainNav .sub1,#mainNav .sub9,#mainNav .sub15,#mainNav .sub23,#mainNav .sub30,#mainNav .sub38,#mainNav .sub43,#mainNav .sub47,#mainNav .sub612,#mainNav .sub613 {
+    height:31px;
+    display:none; 
+    position:absolute; 
+    color:#fff; 
+    top:37px; 
+    left:0; 
+    background:#f2f1ef; 
+    margin-top:3px; 
+    padding:0; 
+    z-index:1;
+    font-family:Arial; 
+    font-size:14px;
+    width: 100%;
+}
+
+#mainNav .sub a{
+	font-family:UTM_Swiss; 
+    font-size:14px; 
+    font-weight: normal;
+    background: transparent;
+    padding:6px 10px 0px 5px; 
+    float:left; 
+    border: none!important;
+    color:#ef5521;
+    line-height:20px;
+}
+#mainNav .sub #search {
+width: 233px;
+height: 20px;
+margin-right:15px;
+margin-top: 5px;
+}
+#mainNav .sub #search input.textfield {
+width: 210px;
+border: 1px solid #c0c0c0;
+height: 18px;
+float: left;
+color:#ef5521;
+font-style:italic;
+font-size:11px;
+font-family:UTM_Swiss;
+}
+#mainNav .sub #search input.submit {
+background: url('/design/imgnew/icon-search.png') no-repeat;
+cursor: pointer;
+height: 20px;
+border: none;
+width: 20px;
+font-size: 0px;
+float: right;
+}
+#mainNav .sub1 a,#mainNav .sub9 a,#mainNav .sub15 a,#mainNav .sub23 a,#mainNav .sub30 a,#mainNav .sub38 a,
+#mainNav .sub43 a,#mainNav .sub47 a,#mainNav .sub612 a,#mainNav .sub613 a{
+	font-family:UTM_Swiss; 
+    font-size:14px; 
+    font-weight: normal;
+    background: transparent;
+    padding:0px 10px 0px 5px; 
+    float:left; 
+    border: none!important;
+    color:#ef5521;
+    margin:0;
+}
+
+/* for IE5.5 and IE6 only */
+#mainNav table {
+    position:absolute; 
+    border-collapse:collapse; 
+    left:0; 
+    top:0; 
+    font-size:11px;
+    }
+    
+
+#mainNav .sub li a:hover,#mainNav .sub1 li a:hover,#mainNav .sub9 li a:hover,#mainNav .sub15 li a:hover,#mainNav .sub23 li a:hover
+,#mainNav .sub30 li a:hover,#mainNav .sub38 li a:hover,#mainNav .sub43 li a:hover,#mainNav .sub47 li a:hover
+,#mainNav .sub43 li a:hover,#mainNav .sub612 li a:hover,#mainNav .sub43 li a:hover,#mainNav .sub613 li a:hover {
+    color:red; 
+    font-family:UTM_Swiss; 
+    font-size:14px;
+    }
+#mainNav .select li:hover .sub li a:hover,#mainNav .select li:hover .sub1 li a:hover,#mainNav .select li:hover .sub9 li a:hover
+,#mainNav .select li:hover .sub15 li a:hover,#mainNav .select li:hover .sub23 li a:hover,#mainNav .select li:hover .sub30 li a:hover 
+,#mainNav .select li:hover .sub38 li a:hover,#mainNav .select li:hover .sub43 li a:hover,#mainNav .select li:hover .sub47 li a:hover
+,#mainNav .select li:hover .sub612 li a:hover,#mainNav .select li:hover .sub613 li a:hover{
+    color:#ef5521; 
+    font: normal 14px UTM_Swiss;
+    text-decoration:underline;
+    }
+
+#mainNav li a.parent:hover {background:url(/Design/imgnew/bg-mainnav-h.png) repeat-x;}
+#mainNav li a.parent1:hover {background:url(/Design/imgnew/bg-mainnav-h.png) repeat-x;}
+#mainNav li a.parent9:hover {background:url(/Design/imgnew/bg-mainnav-h.png) repeat-x;}
+#mainNav li a.parent15:hover {background:url(/Design/imgnew/bg-mainnav-h.png) repeat-x;}
+#mainNav li a.parent23:hover {background:url(/Design/imgnew/bg-mainnav-h.png) repeat-x;}
+#mainNav li a.parent30:hover {background:url(/Design/imgnew/bg-mainnav-h.png) repeat-x;}
+#mainNav li a.parent38:hover {background:url(/Design/imgnew/bg-mainnav-h.png) repeat-x;}
+#mainNav li a.parent43:hover {background:url(/Design/imgnew/bg-mainnav-h.png) repeat-x;}
+#mainNav li a.parent47:hover {background:url(/Design/imgnew/bg-mainnav-h.png) repeat-x;}
+#mainNav li a.parent612:hover {background:url(/Design/imgnew/bg-mainnav-h.png) repeat-x;}
+#mainNav li a.parent613:hover {background:url(/Design/imgnew/bg-mainnav-h.png) repeat-x;}
+    
+#mainNav .select li sub, #mainNav .select li a:hover .sub,
+#mainNav .select li:hover .sub {margin:0; padding:0; list-style:none;display:block; position:absolute; height:31px; top:40px; left:0px!important; z-index:100;width: 100%;float: left;background:#f2f1ef;/*url(/design/imgnew/bg-sub-mainnav.png) left top no-repeat;*/}
+#mainNav .select li:hover .sub a{color:#ef5521!important;padding:7px 10px!important;}
+#mainNav .select li:hover .sub1 {margin:0; padding:0; list-style:none;display:block; position:absolute; height:31px; top:40px; left:0px!important; background:#f2f1ef;z-index:100;width: 100%;float: left;border-radius:0px 0px 3px 3px;}
+#mainNav .select li:hover .sub9 {margin:0; padding:0; list-style:none;display:block; position:absolute; height:31px; top:40px; left:0px!important; background:#f2f1ef;z-index:100;width: 100%;float: left;border-radius:0px 0px 3px 3px;}
+#mainNav .select li:hover .sub15 {margin:0; padding:0; list-style:none;display:block; position:absolute; height:31px; top:40px; left:0px!important; background:#f2f1ef;z-index:100;width: 100%;float: left;border-radius:0px 0px 3px 3px;}
+#mainNav .select li:hover .sub23 {margin:0; padding:0; list-style:none;display:block; position:absolute; height:31px; top:40px; left:0px!important; background:#f2f1ef;z-index:100;width: 100%;float: left;border-radius:0px 0px 3px 3px;}
+#mainNav .select li:hover .sub30 {margin:0; padding:0; list-style:none;display:block; position:absolute; height:31px; top:40px; left:0px!important; background:#f2f1ef;z-index:100;width: 100%;float: left;border-radius:0px 0px 3px 3px;}
+#mainNav .select li:hover .sub38 {margin:0; padding:0; list-style:none;display:block; position:absolute; height:31px; top:40px; left:0px!important; background:#f2f1ef;z-index:100;width: 100%;float: left;border-radius:0px 0px 3px 3px;}
+#mainNav .select li:hover .sub43 {margin:0; padding:0; list-style:none;display:block; position:absolute; height:31px; top:40px; left:0px!important; background:#f2f1ef;z-index:100;width: 100%;float: left;border-radius:0px 0px 3px 3px;}
+#mainNav .select li:hover .sub47 {margin:0; padding:0; list-style:none;display:block; position:absolute; height:31px; top:40px; left:0px!important; background:#f2f1ef;z-index:100;width: 100%;float: left;border-radius:0px 0px 3px 3px;}
+#mainNav .select li:hover .sub612 {margin:0; padding:0; list-style:none;display:block; position:absolute; height:31px; top:40px; left:0px!important; background:#f2f1ef;z-index:100;width: 100%;float: left;border-radius:0px 0px 3px 3px;}
+#mainNav .select li:hover .sub613 {margin:0; padding:0; list-style:none;display:block; position:absolute; height:31px; top:40px; left:0px!important; background:#f2f1ef;z-index:100;width: 100%;float: left;border-radius:0px 0px 3px 3px;}
+
+
+#mainNav .sub {margin:0; padding:0; list-style:none;}
+
+* html #mainNav .select a:hover .sub {z-index:-1; margin-top:0;}
+
+#mainNav .select a:hover .sub li a,#mainNav .select li:hover .sub li a {display:inline; background:transparent; padding:4px 10px 0px 5px; margin:0; width:auto; white-space:nowrap; font-weight:normal; border:0; color:#ef5521;  font: normal 14px UTM_Swiss;}
+#mainNav .select a:hover .sub1 li a,#mainNav .select li:hover .sub1 li a {display:inline; background:transparent; padding:4px 10px 0px 5px; margin:0; width:auto; white-space:nowrap; font-weight:normal; border:0; color:#ef5521;  font: normal 14px UTM_Swiss;}
+#mainNav .select a:hover .sub9 li a,#mainNav .select li:hover .sub9 li a {display:inline; background:transparent; padding:4px 10px 0px 5px; margin:0; width:auto; white-space:nowrap; font-weight:normal; border:0; color:#ef5521;  font: normal 14px UTM_Swiss;}
+#mainNav .select a:hover .sub15 li a,#mainNav .select li:hover .sub15 li a {display:inline; background:transparent; padding:4px 10px 0px 5px; margin:0; width:auto; white-space:nowrap; font-weight:normal; border:0; color:#ef5521;  font: normal 14px UTM_Swiss;}
+#mainNav .select a:hover .sub23 li a,#mainNav .select li:hover .sub23 li a {display:inline; background:transparent; padding:4px 10px 0px 5px; margin:0; width:auto; white-space:nowrap; font-weight:normal; border:0; color:#ef5521;  font: normal 14px UTM_Swiss;}
+#mainNav .select a:hover .sub30 li a,#mainNav .select li:hover .sub30 li a {display:inline; background:transparent; padding:4px 10px 0px 5px; margin:0; width:auto; white-space:nowrap; font-weight:normal; border:0; color:#ef5521;  font: normal 14px UTM_Swiss;}
+#mainNav .select a:hover .sub38 li a,#mainNav .select li:hover .sub38 li a {display:inline; background:transparent; padding:4px 10px 0px 5px; margin:0; width:auto; white-space:nowrap; font-weight:normal; border:0; color:#ef5521;  font: normal 14px UTM_Swiss;}
+#mainNav .select a:hover .sub43 li a,#mainNav .select li:hover .sub43 li a {display:inline; background:transparent; padding:4px 10px 0px 5px; margin:0; width:auto; white-space:nowrap; font-weight:normal; border:0; color:#ef5521;  font: normal 14px UTM_Swiss;}
+#mainNav .select a:hover .sub47 li a,#mainNav .select li:hover .sub47 li a {display:inline; background:transparent; padding:4px 10px 0px 5px; margin:0; width:auto; white-space:nowrap; font-weight:normal; border:0; color:#ef5521;  font: normal 14px UTM_Swiss;}
+#mainNav .select a:hover .sub612 li a,#mainNav .select li:hover .sub612 li a {display:inline; background:transparent; padding:4px 10px 0px 5px; margin:0; width:auto; white-space:nowrap; font-weight:normal; border:0; color:#ef5521;  font: normal 14px UTM_Swiss;}
+#mainNav .select a:hover .sub613 li a,#mainNav .select li:hover .sub613 li a {display:inline; background:transparent; padding:4px 10px 0px 5px; margin:0; width:auto; white-space:nowrap; font-weight:normal; border:0; color:#ef5521;  font: normal 14px UTM_Swiss;}
+
+#mainNav .select .child_active1 li a {display:inline; background:transparent; padding:9px 10px 0px 5px; margin:0; width:auto; white-space:nowrap; font-weight:normal; border:0; color:#ef5521;  font: normal 14px Arial;}
+#mainNav .select .child_active9 li a {display:inline; background:transparent; padding:9px 10px 0px 5px; margin:0; width:auto; white-space:nowrap; font-weight:normal; border:0; color:#ef5521;  font: normal 14px Arial;}
+#mainNav .select .child_active15 li a {display:inline; background:transparent; padding:9px 10px 0px 5px; margin:0; width:auto; white-space:nowrap; font-weight:normal; border:0; color:#ef5521;  font: normal 14px Arial;}
+#mainNav .select .child_active23 li a {display:inline; background:transparent; padding:9px 10px 0px 5px; margin:0; width:auto; white-space:nowrap; font-weight:normal; border:0; color:#ef5521;  font: normal 14px Arial;}
+#mainNav .select .child_active30 li a {display:inline; background:transparent; padding:9px 10px 0px 5px; margin:0; width:auto; white-space:nowrap; font-weight:normal; border:0; color:#ef5521;  font: normal 14px Arial;}
+#mainNav .select .child_active38 li a {display:inline; background:transparent; padding:9px 10px 0px 5px; margin:0; width:auto; white-space:nowrap; font-weight:normal; border:0; color:#ef5521;  font: normal 14px Arial;}
+#mainNav .select .child_active43 li a {display:inline; background:transparent; padding:9px 10px 0px 5px; margin:0; width:auto; white-space:nowrap; font-weight:normal; border:0; color:#ef5521;  font: normal 14px Arial;}
+#mainNav .select .child_active47 li a {display:inline; background:transparent; padding:9px 10px 0px 5px; margin:0; width:auto; white-space:nowrap; font-weight:normal; border:0; color:#ef5521;  font: normal 14px Arial;}
+#mainNav .select .child_active612 li a {display:inline; background:transparent; padding:9px 10px 0px 5px; margin:0; width:auto; white-space:nowrap; font-weight:normal; border:0; color:#ef5521;  font: normal 14px Arial;}
+#mainNav .select .child_active613 li a {display:inline; background:transparent; padding:9px 10px 0px 5px; margin:0; width:auto; white-space:nowrap; font-weight:normal; border:0; color:#ef5521;  font: normal 14px Arial;}
+
+#mainNav li.current2 a.parent1 {background:url(/Design/imgnew/bg-mainnav-h.png) repeat-x !important;}
+#mainNav li.current2 a.parent9 {background:url(/Design/imgnew/bg-mainnav-h.png) repeat-x !important;}
+#mainNav li.current2 a.parent15 {background:url(/Design/imgnew/bg-mainnav-h.png) repeat-x !important;}
+#mainNav li.current2 a.parent23 {background:url(/Design/imgnew/bg-mainnav-h.png) repeat-x !important;}
+#mainNav li.current2 a.parent30 {background:url(/Design/imgnew/bg-mainnav-h.png) repeat-x !important;}
+#mainNav li.current2 a.parent38 {background:url(/Design/imgnew/bg-mainnav-h.png) repeat-x !important;}
+#mainNav li.current2 a.parent43 {background:url(/Design/imgnew/bg-mainnav-h.png) repeat-x !important;}
+#mainNav li.current2 a.parent47 {background:url(/Design/imgnew/bg-mainnav-h.png) repeat-x !important;}
+#mainNav li.current2 a.parent612 {background:url(/Design/imgnew/bg-mainnav-h.png) repeat-x !important;}
+#mainNav li.current2 a.parent613 {background:url(/Design/imgnew/bg-mainnav-h.png) repeat-x !important;}
+
+#mainNav li.current2 div.sub1 {display:block !important;}
+#mainNav li.current2 div.sub9 {display:block !important;}
+#mainNav li.current2 div.sub15 {display:block !important;}
+#mainNav li.current2 div.sub23 {display:block !important;}
+#mainNav li.current2 div.sub30 {display:block !important;}
+#mainNav li.current2 div.sub38 {display:block !important;}
+#mainNav li.current2 div.sub43 {display:block !important;}
+#mainNav li.current2 div.sub47 {display:block !important;}
+#mainNav li.current2 div.sub612 {display:block !important;}
+#mainNav li.current2 div.sub613 {display:block !important;}
+/*------------------Home new----------------------------------*/
+#home-new
+{
+    height:auto;
+width: 1010px;
+float: left;
+margin-top:25px;
+overflow: hidden;}
+#home-new .hleft
+{
+    float:left;
+    width:680px;
+    }
+#home-new .hright
+{
+    float:right;
+    width:322px;
+    }
+#home-new .tkhg
+{
+    float:left;
+    width:1010px;
+    margin-bottom:10px;
+    }
+#home-new .xhleft
+{
+    float:left;
+    width:510px;
+    }
+#home-new .xhright
+{
+    float:right;
+    width:500px;
+    }

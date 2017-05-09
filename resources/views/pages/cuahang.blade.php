@@ -21,14 +21,14 @@
                     <h3><span class="glyphicon glyphicon-align-left"></span>Giới Thiệu Về Cửa Hàng:</h3>
                     <div class="form-group">
                          <p>
-                            {{ $cuahang->gioi_thieu }}
+                            {!! $cuahang->gioi_thieu !!}
                         </p>
                     </div>
-                    <h3><span class="glyphicon glyphicon-align-left"></span>Link:</h3>
+                    <h3><span class="glyphicon glyphicon-align-center"></span>Link:</h3>
                     <div class="media-heading list-group-item-info">
                         <a href="{{ $cuahang->link }}" target="_blank">
                          <h4 style="color:blue;text-align:left;">
-                         <p>
+                         <p align="center">
                              {{ $cuahang->link }}</h4>
                          </p>
                         </a>
@@ -37,9 +37,9 @@
                     <h3><span class="glyphicon glyphicon-link">Vị Trí:</h3>
 
                     <h3><span class="glyphicon glyphicon-globe"></span> Bản đồ</h3>
-                    <div class="break"></div><br>
-                    <iframe src="{{$cuahang->vi_chi }}"
-                     width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <div class="break container"></div><br>
+                     <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCeNkdz8H9gRA5kmf605jC2xaniq55lhns&q={{$cuahang->vi_chi}}"
+                     width="820" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
             </div>
         </div>

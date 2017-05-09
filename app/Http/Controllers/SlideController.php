@@ -19,16 +19,16 @@ class SlideController extends Controller
     public function postThem(Request $request){
     	$this->validate($request,
     							[
-    								'txtTen' => 'required',
-    								'taNoiDung' =>'required'
+    								'ten' => 'required',
+    								'NoiDung' =>'required'
     							],
     							[
-    								'txtTen.required'  => 'Bạn Chưa nhập tên slide..',
-    								'taNoiDung'        => 'Bạn Chưa Ghi Nội dung của slide...'
+    								'ten.required'  => 'Bạn Chưa nhập tên slide..',
+    								'NoiDung.required'        => 'Bạn Chưa Ghi Nội dung của slide...'
     							]);
     	$slide = new Slide;
-    	$slide->Ten = $request->txtTen;
-    	$slide->NoiDung = $request->taNoiDung;
+    	$slide->Ten = $request->ten;
+    	$slide->NoiDung = $request->NoiDung;
     	if($request->has('link')){
     		$slide->link = $request->link;
     	}
@@ -41,10 +41,10 @@ class SlideController extends Controller
                 }
                 $name = $file->getClientOriginalName();
                 $Hinh = str_random(4)."_".$name;
-                while(file_exists('uploaded/slide/'.$Hinh)){
+                while(file_exists('upload/slide/'.$Hinh)){
                     $Hinh = str_random(4)."_".$name;
                 }
-                $file->move("uploaded/slide",$Hinh);
+                $file->move("upload/slide",$Hinh);
                 $slide->Hinh = $Hinh;
         }else{
             $slide->Hinh = "";
@@ -61,17 +61,17 @@ class SlideController extends Controller
     public function postSua(Request $request,$id){
     	$this->validate($request,
     							[
-    								'txtTen' => 'required',
-    								'taNoiDung' =>'required'
+    								'ten' => 'required',
+    								'NoiDung' =>'required'
     							],
     							[
-    								'txtTen.required'  => 'Bạn Chưa nhập tên slide..',
-    								'taNoiDung'        => 'Bạn Chưa Ghi Nội dung của slide...'
+    								'ten.required'  => 'Bạn Chưa nhập tên slide..',
+    								'NoiDung'        => 'Bạn Chưa Ghi Nội dung của slide...'
     							]);
     	
     	$slide = Slide::find($id);
-    	$slide->Ten = $request->txtTen;
-    	$slide->NoiDung = $request->taNoiDung;
+    	$slide->Ten = $request->ten;
+    	$slide->NoiDung = $request->NoiDung;
     	if($request->has('link')){
     		$slide->link = $request->link;
     	}
@@ -84,11 +84,11 @@ class SlideController extends Controller
                 }
                 $name = $file->getClientOriginalName();
                 $Hinh = str_random(4)."_".$name;
-                while(file_exists('uploaded/slide/'.$Hinh)){
+                while(file_exists('upload/slide/'.$Hinh)){
                     $Hinh = str_random(4)."_".$name;
                 }
-                unlink('uploaded/slide/'.$slide->Hinh);
-                $file->move("uploaded/slide",$Hinh);
+                unlink('upload/slide/'.$slide->Hinh);
+                $file->move("upload/slide",$Hinh);
                 $slide->Hinh = $Hinh;
         }
 

@@ -27,36 +27,36 @@
                     <input type="hidden" name="_token" value="{{csrf_token()}}" />
                     <div class="form-group">
                         <label>Tên Người Dùng</label>
-                        <input class="form-control" name="txtUsername" value="{{$user->username}}" placeholder="Vui Lòng Nhập Tên Người Dùng !!!" />
+                        <input class="form-control" name="username" value="{{$user->username}}" placeholder="Vui Lòng Nhập Tên Người Dùng !!!" />
                     </div>
                     <div class="form-group">
                         <label>Địa Chỉ Email</label>
-                        <input class="form-control" name="txtMail" value="{{$user->email}}" placeholder="Vui Lòng Nhập Mail Người Dùng !!!" readonly="" />
+                        <input class="form-control" name="email" value="{{$user->email}}" placeholder="Vui Lòng Nhập Mail Người Dùng !!!" readonly="" />
                     </div>
                     <div class="form-group">
                         <input type="checkbox" name="changePass" id="changePass">
                         <label>Đổi Mật Khẩu</label>
-                        <input type="password" class="form-control password" name="txtPass" placeholder="Nhập Password Mới !!!"  disabled="">
+                        <input type="password" class="form-control password" name="password" placeholder="Nhập Password Mới !!!"  disabled="">
                     </div>
                     <div class="form-group">
                         <label>Xác Nhận Mật Khẩu</label>
-                        <input type="password" class="form-control password" name="txtPassXN" placeholder="Nhập Lại Password Mới !!!" disabled="" />
+                        <input type="password" class="form-control password" name="passwordAgain" placeholder="Nhập Lại Password Mới !!!" disabled="" />
                     </div>
                     <div class="form-group">
                         <label>Master</label>
-                        <input class="form-control" name="txtMaster" value="{{$user->master}}" placeholder="Vui Lòng Nhập Trình độ !!!" />
+                        <input class="form-control" name="master" value="{{$user->master}}" placeholder="Vui Lòng Nhập Trình độ !!!" />
                     </div>
                     <div class="form-group">
                         <label>Profile</label>
-                        <textarea class="form-control" rows="3" name="txtProfile">
+                        <textarea class="form-control" rows="3" name="profile">
                             {{$user->profile}}
                         </textarea>
                     </div>
                     <div class="form-group">
                         <label>Level:</label>
                         <label class="radio-inline">
-                            <input name="level" value="2" 
-                            @if ($user->level == 2)
+                            <input name="level" value="3" 
+                            @if ($user->level == 3)
                                 {{"checked"}}
                             @endif
                              type="radio">Customer

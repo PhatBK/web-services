@@ -15,7 +15,7 @@ class CommentController extends Controller
     	$comment = Comment::find($id);
     	$comment->delete();
 
-    	return redirect('admin/monan/sua/'.$idMonAn)->with('thongbao','Bạn đã sóa comment thành công ...');
+    	return redirect('admin/monan/sua/'.$idMonAn)->with('thongbao','Bạn đã Xóa comment thành công ...');
     }
     public function postComment(Request $request,$id){
     	$idMonAn = $id;

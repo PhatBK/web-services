@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Website Món Ăn</title>
+    <title>BK Foods-Cooking</title>
     <base href="{{asset('')}}">
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -43,7 +43,7 @@
                 <!-- Blog Post -->
 
                 <!-- Title -->
-                <h1>{{$monan->TieuDe}}</h1>
+                <h1>{!!$monan->TieuDe!!}</h1>
 
                 <!-- Author -->
                 <p class="lead">
@@ -52,10 +52,10 @@
 
                 <!-- Preview Image -->
                 <img class="img-responsive" src="upload/monan/{{$monan->Hinh}}" alt="">
-                
+                    
             <img id='unlike' class="img-responsive center-block" style="margin-left: 5px;" src="upload/like.jpg" alt="" width="50px" height="50px" onclick="document.getElementById('unlike').src='upload/liked.jpg'">
                 <!-- Date/Time -->
-                <p><span class="glyphicon glyphicon-time"></span> Posted on {{$monan->created_at}}</p>
+                <p><span class="glyphicon glyphicon-time"></span>Ngày Đăng: {{$monan->created_at}}</p>
                 <hr>
 
                 <!-- Post Content -->
@@ -194,15 +194,10 @@
 
     <!-- Footer -->
     <hr>
-    <footer>
-        <div class="row">
-            <div class="col-md-12">
-                <p>Copyright &copy; Your Website 2017</p>
-            </div>
-        </div>
-    </footer>
+     @include('layout.footer')
     <!-- end Footer -->
     <!-- jQuery -->
+
     <script src="js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>

@@ -39,7 +39,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Tên Loại Món</label>
-                                <input class="form-control" name="txtTen" value="{{$loaimon->ten}}" />
+                                <input class="form-control" name="ten" value="{{$loaimon->ten}}" />
                             </div>
                             <button type="submit" class="btn btn-default">Sửa</button>
                             <button type="reset" class="btn btn-default">Đặt Lại Mặc Định</button>

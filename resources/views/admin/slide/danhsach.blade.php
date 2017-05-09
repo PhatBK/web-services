@@ -34,7 +34,7 @@
                                     <td>{{$sl->Ten}}</td>
                                     <td>{!!$sl->NoiDung!!}</td>
                                     <td>
-                                        <img  width="500px" src="uploaded/slide/{{$sl->Hinh}}">
+                                        <img  width="500px" src="upload/slide/{{$sl->Hinh}}">
                                     </td>
                                     <td>{{$sl->link}}</td>
                                     <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/slide/xoa/{{$sl->id}}">Xoá</a></td>

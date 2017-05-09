@@ -1,5 +1,6 @@
 <?php
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 use Illuminate\Validation;
 use App\Http\Requests;
@@ -7,11 +8,12 @@ use App\Models\TheLoai;
 use App\Models\LoaiMon;
 use App\Models\MonAn;
 use App\Models\VungMien;
+
 class VungMienController extends Controller
 {
 public function getDanhSach(){
-$vungmien = VungMien::all();
-return view('admin.vungmien.danhsach',['vungmien'=>$vungmien]);
+	$vungmien = VungMien::all();
+	return view('admin.vungmien.danhsach',['vungmien'=>$vungmien]);
 }
 
 //Thêm Thông tin

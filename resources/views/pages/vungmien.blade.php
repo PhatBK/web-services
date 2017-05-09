@@ -7,16 +7,28 @@
 
             <div class="col-md-9 ">
                 <div class="panel panel-default">
-                    <div class="panel-heading" style="background-color:#337AB7; color:white;">
-                        <h4><b>{{$vungmienMon->ten}}</b></h4>
+                    <div class="panel-heading" style="background-color:green; color:white;">
+                        <h3 align="center"><b style="color:white;">{{$vungmienMon->ten}}</b></h3>
                        
                     </div>
-                     <small><p>{{$vungmienMon->info}}</p></small>
+                    <h4>Giới Thiệu:</h4>
+                    <div class="media-heading list-group-item-info">
+                      <small>
+                        <h4>
+                             <b>
+                                {{$vungmienMon->info}}
+                             </b>
+                        </h4>
+                      </small>
+                    </div>
+                     <hr size="10px">
+                     <h3><p align="center">Danh Sách Các Món Ăn:</p></h3>
+                     <hr size="10px">
                     @foreach($monan as $ma)
                     <div class="row-item row">
                         <div class="col-md-3">
 
-                            <a href="monan/{{$ma->id}}">
+                            <a href="monan/{{$ma->id}}/{{ $ma->TieuDeKhongDau }}.html">
                                 <br>
                                 <img width="200px" height="200px" class="img-responsive" src="upload/monan/{{$ma->Hinh}}" alt="">
                             </a>
@@ -31,9 +43,10 @@
                         <div class="break"></div>
                     </div>
                      @endforeach
-                  {{$monan->links()}}
-          
-
+                <!--phân trang cho page vungmien-->
+                <div style="text-align: center; ">
+                     {{$monan->links()}}
+                </div>
                 </div>
             </div> 
 

@@ -1,8 +1,8 @@
  <!-- slider -->
-    <div class="row carousel-holder">
-        <div class="col-md-12">
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
+    <div class="row carousel-holder" >
+        <div class="col-md-12" >
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" >
+                <ol class="carousel-indicators" >
                 <?php $i=0; ?>
                 
                 @foreach ($slide as $sl)
@@ -24,7 +24,7 @@
                                  class="item"
                             @endif
                         >
-                              <img class="slide-image" src="upload/slide/{{$sl->Hinh}}" alt="{{$sl->NoiDung}}">
+                              <img class="slide-image" src="upload/slide/{{$sl->Hinh}}" alt="{{$sl->NoiDung}}" style="height: 350px; width: 1150px;">
                         </div>
                     <?php $i++; ?>
                     @endforeach

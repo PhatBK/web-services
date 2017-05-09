@@ -28,22 +28,22 @@
                    
                     <div class="form-group">
                         <label>Tên Slide</label>
-                        <input class="form-control" name="txtTen" placeholder="Vui Lòng Nhập Tên Cho Slide.." value="{{$slide->Ten}}" />
+                        <input class="form-control" name="ten" placeholder="Vui Lòng Nhập Tên Cho Slide.." value="{{$slide->Ten}}" />
                     </div>
                     <div class="form-group">
                         <label>Nội Dung</label>
-                        <textarea id="demo" class="form-control ckeditor" rows="3" name="taNoiDung">
+                        <textarea id="demo" class="form-control ckeditor" rows="3" name="NoiDung">
                             {{$slide->NoiDung}}
                         </textarea>
                     </div>
                     <div class="form-group">
                         <label>Link</label>
-                        <input class="form-control" name="txtLink" placeholder="Vui Lòng Nhập Tên Link ..." value="{{$slide->link}}" />
+                        <input class="form-control" name="link" placeholder="Vui Lòng Nhập Tên Link ..." value="{{$slide->link}}" />
                     </div>
                     <div class="form-group">
                         <label>Hình Ảnh</label>
                         <p>
-                            <img src="uploaded/slide/{{$slide->Hinh}}" alt="placeholder+image" width="500px" >
+                            <img src="upload/slide/{{$slide->Hinh}}" alt="placeholder+image" width="500px" >
                         </p>
                         <input type="file" name="Hinh" class="form-control" />
                     </div>

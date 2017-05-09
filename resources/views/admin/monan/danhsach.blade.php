@@ -44,7 +44,7 @@
                                 <td>{{$ma->TieuDe}}</td>
                                 <td>{{$ma->TieuDeKhongDau}}</td>
                                 <td><p>{{$ma->TenMon}}</p>
-                                    <img width="100px" height="100px" src="uploaded/monan/{{$ma->Hinh}}" />
+                                    <img width="100px" height="100px" src="upload/monan/{{$ma->Hinh}}" />
                                 </td>
                                 <td>{!!$ma->TomTat!!}</td>
                                 <td>{!!$ma->NoiDung!!}</td>

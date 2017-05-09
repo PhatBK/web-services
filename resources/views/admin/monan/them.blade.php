@@ -52,19 +52,19 @@
                     </div>
                     <div class="form-group">
                         <label>Tiêu Đề</label>
-                        <input class="form-control" name="txtTieuDe" placeholder="Vui Lòng Nhập Tiêu Đề.." />
+                        <input class="form-control" name="TieuDe" placeholder="Vui Lòng Nhập Tiêu Đề.." />
                     </div>
                     <div class="form-group">
                         <label>Tên Món</label>
-                        <input class="form-control" name="txtTenMon" placeholder="Vui Lòng Nhập Tên Món.." />
+                        <input class="form-control" name="TenMon" placeholder="Vui Lòng Nhập Tên Món.." />
                     </div>
                     <div class="form-group">
                         <label>Tóm Tắt</label>
-                        <textarea id="demo" class="form-control ckeditor" rows="3" name="taTomTat"></textarea>
+                        <textarea id="demo" class="form-control ckeditor" rows="3" name="TomTat"></textarea>
                     </div>
                     <div class="form-group">
                         <label>Nội Dung</label>
-                        <textarea id="demo" class="form-control ckeditor" rows="3" name="taNoiDung"></textarea>
+                        <textarea id="demo" class="form-control ckeditor" rows="3" name="NoiDung"></textarea>
                     </div>
                     <div class="form-group">
                         <label>Hình Ảnh</label>
@@ -72,7 +72,7 @@
                     </div>
                     <div class="form-group">
                         <label>Chú Ý Về Món Ăn </label>
-                        <textarea class="form-control" rows="3" name="taChu_Y"></textarea>
+                        <textarea class="form-control" rows="3" name="Chu_Y"></textarea>
                     </div>
                     <div class="form-group">
                         <label>Nổi Bật</label>

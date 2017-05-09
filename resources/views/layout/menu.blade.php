@@ -11,9 +11,11 @@
                     </li>
                         <ul>
                             @foreach ($tl->loaimon as $lm)
+                                @if(count($lm->monan)>0)
                                 <li class="list-group-item">
                                     <a href="loaimon/{{$lm->id}}/{{$lm->ten_khong_dau}}.html">{{$lm->ten}}</a>
                                 </li>
+                                @endif
                             @endforeach
                         </ul>
                 @endif

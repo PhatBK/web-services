@@ -38,36 +38,38 @@ class MonAnController extends Controller
                             'sltTheLoai'   =>  'required',
                             'sltLoaiMon'   =>  'required',
                             'sltVungMien'  =>  'required', 
-                            'txtTieuDe'    =>  'required|min:3|unique:MonAn,TieuDe',
-                            'txtTenMon'    =>  'required|min:3|unique:MonAn,TenMon',
-                            'taTomTat'     =>  'required',
-                            'taNoiDung'    =>  'required'
+                            'TieuDe'    =>  'required|min:3|unique:MonAn,TieuDe',
+                            'TenMon'    =>  'required|min:3|unique:MonAn,TenMon',
+                            'TomTat'     =>  'required',
+                            'NoiDung'    =>  'required',
+                            'Chu_Y'      =>  'required'
 
                         ],
                         [
                             'sltTheLoai.required'   =>  'bạn Chưa Trọn Thể Loại',
                             'sltLoaiMon.required'   =>  'Bạn Chưa Trọn Loại Món..',
                             'sltVungMien.required'  =>  'Bạn Chưa Chọn Vùng Miền ',
-                            'txtTieuDe.required'    =>  'Bạn Chưa Nhập  Tiêu Đề..',
-                            'txtTieuDe.min'         =>  'Tiêu Đề Cần có độ dài > 3 ký tự',
-                            'txtTieuDe.unique'      =>  'Tiêu Đề Này Đã Tồn Tại..',
-                            'txtTenMon.required'    =>  'Bạn chưa Nhập tên Món Ăn',
-                            'txtTenMon.min'         =>  'Tên Món Cần Dài Hơn 3 ký tự',
-                            'txtTenMon.unique'      =>  'Tên Món Đã tồn tại,nhập tên khác',
-                            'taTomTat.required'     =>  'Bạn Trưa nhập Tóm tăt..',
-                            'taNoiDung.required'    =>  'Bạn Chưa Nhập Nội Dung Cho Món Ăn..'
+                            'TieuDe.required'    =>  'Bạn Chưa Nhập  Tiêu Đề..',
+                            'TieuDe.min'         =>  'Tiêu Đề Cần có độ dài > 3 ký tự',
+                            'TieuDe.unique'      =>  'Tiêu Đề Này Đã Tồn Tại..',
+                            'TenMon.required'    =>  'Bạn chưa Nhập tên Món Ăn',
+                            'TenMon.min'         =>  'Tên Món Cần Dài Hơn 3 ký tự',
+                            'TenMon.unique'      =>  'Tên Món Đã tồn tại,nhập tên khác',
+                            'TomTat.required'     =>  'Bạn Trưa nhập Tóm tăt..',
+                            'NoiDung.required'    =>  'Bạn Chưa Nhập Nội Dung Cho Món Ăn..',
+                            'Chu_Y.required'      =>  'Chưa Nhập Chú ý'
 
                         ]);
 
         $monan = new MonAn;
         $monan->id_LoaiMon = $request->sltLoaiMon;
         $monan->id_VungMien = $request->sltVungMien;
-        $monan->TieuDe = $request->txtTieuDe;
-        $monan->TieuDeKhongDau = changeTitle($request->txtTieuDe);
-        $monan->TenMon = $request->txtTenMon;
-        $monan->TomTat = $request->taTomTat;
-        $monan->NoiDung = $request->taNoiDung;
-        $monan->Chu_Y  = $request->taChu_Y;
+        $monan->TieuDe = $request->TieuDe;
+        $monan->TieuDeKhongDau = changeTitle($request->TieuDe);
+        $monan->TenMon = $request->TenMon;
+        $monan->TomTat = $request->TomTat;
+        $monan->NoiDung = $request->NoiDung;
+        $monan->Chu_Y  = $request->Chu_Y;
         $monan->NoiBat =$request->NoiBat;
         $monan->SoLuotXem = 0;
 
@@ -80,10 +82,10 @@ class MonAnController extends Controller
                 }
                 $name = $file->getClientOriginalName();
                 $Hinh = str_random(4)."_".$name;
-                while(file_exists('uploaded/monan/'.$Hinh)){
+                while(file_exists('upload/monan/'.$Hinh)){
                     $Hinh = str_random(4)."_".$name;
                 }
-                $file->move("uploaded/monan",$Hinh);
+                $file->move("upload/monan",$Hinh);
                 $monan->Hinh = $Hinh;
         }else{
             $monan->Hinh = "";
@@ -114,30 +116,30 @@ class MonAnController extends Controller
                                     'sltTheLoai'  =>  'required',
                                     'sltLoaiMon'  =>  'required',
                                     'sltVungMien' =>  'required',
-                                    'txtTieuDe'   =>  "required|unique:MonAn,TieuDe,$id|min:3",
-                                    'txtTenMon'   =>  "required|unique:MonAn,TenMon,$id|min:3",
-                                    'taTomTat'    =>  'required',
-                                    'taNoiDung'   =>  'required'
+                                    'TieuDe'   =>  "required|unique:MonAn,TieuDe,$id|min:3",
+                                    'TenMon'   =>  "required|unique:MonAn,TenMon,$id|min:3",
+                                    'TomTat'    =>  'required',
+                                    'NoiDung'   =>  'required'
                                 ],
                                 [
                                     'sltTheLoai.required'  => 'Bạn Chưa Trọn Thể Loại ',
                                     'sltLoaiMon.required'  => 'Bạn Chưa Chọn Loại Món ',
                                     'sltVungMien.required' => 'Bạn Chưa Chọn Vùng miền',
-                                    'txtTieuDe.required'   => 'Bạn Chưa Thay Đổi Tiêu Đề',
-                                    'txtTieuDe.min'        => 'Tiêu đè cần có đọ dài trong khoảng > 3 ký tự',
-                                    'txtTenMon.required'   => 'Bạn Chưa Thay Đổi Tên Món Ăn',
-                                    'txtTenMon.min'        => 'Tên Món Cần có độ dìa trong khoảng > 3 Ký tự',
-                                    'taTomTat.required'    => 'Bạn Chưa Thay Đổi tóm Tắt',
-                                    'taNoiDung.required'   => 'Bạn Chưa Thay Đổi Nội Dung'
+                                    'TieuDe.required'   => 'Bạn Chưa Thay Đổi Tiêu Đề',
+                                    'TieuDe.min'        => 'Tiêu đè cần có đọ dài trong khoảng > 3 ký tự',
+                                    'TenMon.required'   => 'Bạn Chưa Thay Đổi Tên Món Ăn',
+                                    'TenMon.min'        => 'Tên Món Cần có độ dìa trong khoảng > 3 Ký tự',
+                                    'TomTat.required'    => 'Bạn Chưa Thay Đổi tóm Tắt',
+                                    'NoiDung.required'   => 'Bạn Chưa Thay Đổi Nội Dung'
                                 ]);
         $monan->id_LoaiMon = $request->sltLoaiMon;
         $monan->id_VungMien = $request->sltVungMien;
-        $monan->TieuDe = $request->txtTieuDe;
-        $monan->TieuDeKhongDau = changeTitle($request->txtTieuDe);
-        $monan->TenMon = $request->txtTenMon;
-        $monan->TomTat = $request->taTomTat;
-        $monan->NoiDung = $request->taNoiDung;
-        $monan->Chu_Y  = $request->taChu_Y;
+        $monan->TieuDe = $request->TieuDe;
+        $monan->TieuDeKhongDau = changeTitle($request->TieuDe);
+        $monan->TenMon = $request->TenMon;
+        $monan->TomTat = $request->TomTat;
+        $monan->NoiDung = $request->NoiDung;
+        $monan->Chu_Y  = $request->Chu_Y;
         $monan->NoiBat =$request->NoiBat;
         $monan->SoLuotXem = 0;  
 
@@ -149,11 +151,11 @@ class MonAnController extends Controller
                 }
                 $name = $file->getClientOriginalName();
                 $Hinh = str_random(4)."_".$name;
-                while(file_exists('uploaded/monan/'.$Hinh)){
+                while(file_exists('upload/monan/'.$Hinh)){
                     $Hinh = str_random(4)."_".$name;
                 }
-                $file->move("uploaded/monan",$Hinh);
-                unlink('uploaded/monan/'.$monan->Hinh);
+                $file->move("upload/monan",$Hinh);
+                unlink('upload/monan/'.$monan->Hinh);
                 $monan->Hinh = $Hinh;
         }
         $monan->save();

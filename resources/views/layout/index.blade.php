@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Website Món Ăn</title>
+    <title>BK Foods-Cooking</title>
     <base href="{{asset('')}}">
 
     <!-- Bootstrap Core CSS -->

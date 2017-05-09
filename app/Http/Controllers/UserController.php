@@ -23,32 +23,32 @@ class UserController extends Controller
 	public function postThem(Request $request){
 		$this->validate($request,
 								[
-									'txtUsername'  =>    'required|unique:users,username|min:5',
-									'txtMail'      =>    'required|email|unique:users,email', 
-									'txtPass'      =>    'required|min:5|max:32',
-									'txtPassXN'    =>    'required|same:txtPass'
+									'username'  =>    'required|unique:users,username|min:5',
+									'email'      =>    'required|email|unique:users,email', 
+									'password'      =>    'required|min:5|max:32',
+									'passwordAgain'    =>    'required|same:password'
 								],
 								[
-									'txtUsername.required'  =>  'Chưa Nhập Tên Người Dùng',
-									'txtUsername.min'       =>  'Tên Người Dùng phải từ 5 ký tự trở lên',
-									'txtUsername.unique'    =>  'Người Dùng Này Đã tồn tại',
+									'username.required'  =>  'Chưa Nhập Tên Người Dùng',
+									'username.min'       =>  'Tên Người Dùng phải từ 5 ký tự trở lên',
+									'username.unique'    =>  'Người Dùng Này Đã tồn tại',
 
-									'txtMail.required'      =>  'Chưa Nhập Email người dùng',
-									'txtMail.email'         =>  'Địa Chỉ Mail này không đúng',
-									'txtMail.unique'        =>  'Địa chỉ Mail này đã tồn tại',
-									'txtPass.required'      =>  'Chưa Nhập mật khẩu',
-									'txtPass.min'           =>  'Mật Khẩu phải > 5 ký tự',
-									'txtPass.max'           =>  'Mật khẩu phải <32 lý tự',
+									'email.required'      =>  'Chưa Nhập Email người dùng',
+									'email.email'         =>  'Địa Chỉ Mail này không đúng',
+									'email.unique'        =>  'Địa chỉ Mail này đã tồn tại',
+									'password.required'      =>  'Chưa Nhập mật khẩu',
+									'password.min'           =>  'Mật Khẩu phải > 5 ký tự',
+									'password.max'           =>  'Mật khẩu phải <32 lý tự',
 
-									'txtPassXN.required'    =>  'Chưa xác nhận mật khẩu',
-									'txtPassXN.same'        =>  'Mật Khẩu Xác Nhậ không đúng'
+									'passwordAgain.required'    =>  'Chưa xác nhận mật khẩu',
+									'passwordAgain.same'        =>  'Mật Khẩu Xác Nhận không đúng'
 								]);
 		$user = new User;
-		$user->username = $request->txtUsername;
-		$user->email = $request->txtMail;
-		$user->password = bcrypt($request->txtPass);
-		$user->master = $request->txtMaster;
-		$user->profile = $request->txtProfile;
+		$user->username = $request->username;
+		$user->email = $request->email;
+		$user->password = bcrypt($request->password);
+		$user->master = $request->master;
+		$user->profile = $request->profile;
 		$user->level = $request->level;
 
 		$user->save();
@@ -65,34 +65,34 @@ class UserController extends Controller
 	public function postSua(Request $request,$id){
 		$this->validate($request,
 								[
-									'txtUsername'  =>    'required|unique:users,username|min:5'
+									'username'  =>    'required|unique:users,username|min:5'
 								],
 								[
-									'txtUsername.required'  =>  'Chưa Nhập Tên Người Dùng',
-									'txtUsername.min'       =>  'Tên Người Dùng phải từ 5 ký tự trở lên',
-									'txtUsername.unique'    =>  'Người Dùng Này Đã tồn tại'
+									'username.required'  =>  'Chưa Nhập Tên Người Dùng',
+									'username.min'       =>  'Tên Người Dùng phải từ 5 ký tự trở lên',
+									'username.unique'    =>  'Người Dùng Này Đã tồn tại'
 								]);
 		$user = User::find($id);
-		$user->username = $request->txtUsername;
-		$user->email = $request->txtMail;
-		$user->master = $request->txtMaster;
-		$user->profile = $request->txtProfile;
+		$user->username = $request->username;
+		$user->email = $request->email;
+		$user->master = $request->master;
+		$user->profile = $request->profile;
 		$user->level = $request->level;
 		if($request->changePass == "on"){
 			$this->validate($request,
 								[
-									'txtPass'      =>    'required|min:5|max:32',
-									'txtPassXN'    =>    'required|same:txtPass'
+									'password'      =>    'required|min:5|max:32',
+									'passwordAgain'    =>    'required|same:password'
 								],
 								[
 
-									'txtPass.required'      =>  'Chưa Nhập mật khẩu',
-									'txtPass.min'           =>  'Mật Khẩu phải > 5 ký tự',
-									'txtPass.max'           =>  'Mật khẩu phải <32 lý tự',
-									'txtPassXN.required'    =>  'Chưa xác nhận mật khẩu',
-									'txtPassXN.same'        =>  'Mật Khẩu Xác Nhậ không đúng'
+									'password.required'      =>  'Chưa Nhập mật khẩu',
+									'password.min'           =>  'Mật Khẩu phải > 5 ký tự',
+									'password.max'           =>  'Mật khẩu phải <32 lý tự',
+									'passwordAgain.required'    =>  'Chưa xác nhận mật khẩu',
+									'passwordAgain.same'        =>  'Mật Khẩu Xác Nhậ không đúng'
 								]);
-			$user->password = bcrypt($request->txtPass);
+			$user->password = bcrypt($request->password);
 		}
 		$user->save();
 

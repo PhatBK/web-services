@@ -27,32 +27,32 @@
                     <input type="hidden" name="_token" value="{{csrf_token()}}" />
                     <div class="form-group">
                         <label>Tên Người Dùng</label>
-                        <input class="form-control" name="txtUsername" placeholder="Vui Lòng Nhập Tên Người Dùng !!!" />
+                        <input class="form-control" name="username" placeholder="Vui Lòng Nhập Tên Người Dùng !!!" />
                     </div>
                     <div class="form-group">
                         <label>Địa Chỉ Email</label>
-                        <input type="email" class="form-control" name="txtMail" placeholder="Vui Lòng Nhập Mail Người Dùng !!!" />
+                        <input type="email" class="form-control" name="email" placeholder="Vui Lòng Nhập Mail Người Dùng !!!" />
                     </div>
                     <div class="form-group">
                         <label>Mật Khẩu</label>
-                        <input type="password" class="form-control" name="txtPass" placeholder="Vui Lòng Nhập Password !!!" />
+                        <input type="password" class="form-control" name="password" placeholder="Vui Lòng Nhập Password !!!" />
                     </div>
                     <div class="form-group">
                         <label>Xác Nhận Mật Khẩu</label>
-                        <input type="password" class="form-control" name="txtPassXN" placeholder="Vui Lòng Nhập Lại Password !!!" />
+                        <input type="password" class="form-control" name="passwordAgain" placeholder="Vui Lòng Nhập Lại Password !!!" />
                     </div>
                     <div class="form-group">
                         <label>Trình Độ</label>
-                        <input class="form-control" name="txtMaster" placeholder="Vui Lòng Nhập Trình độ !!!" />
+                        <input class="form-control" name="master" placeholder="Vui Lòng Nhập Trình độ !!!" />
                     </div>
                     <div class="form-group">
                         <label>Profile</label>
-                        <textarea class="form-control" rows="3" name="txtProfile"></textarea>
+                        <textarea class="form-control" rows="3" name="profile"></textarea>
                     </div>
                     <div class="form-group">
                         <label>Level:</label>
                         <label class="radio-inline">
-                            <input name="level" value="2" checked="" type="radio">Customer
+                            <input name="level" value="3" checked="" type="radio">Customer
                         </label>
                         <label class="radio-inline">
                             <input name="level" value="1"  type="radio">Admin-add

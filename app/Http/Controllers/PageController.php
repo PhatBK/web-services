@@ -3,15 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\TheLoai;
-use App\Slide;
-use App\LoaiMon;
-use App\Monan;
-use App\Comment;
-use App\User;
-use App\VungMien;
-use App\CuaHang;
+use Illuminate\Validation;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Foundation;
+
+use App\Models\TheLoai;
+use App\Models\Slide;
+use App\Models\LoaiMon;
+use App\Models\Monan;
+use App\Models\Comment;
+use App\Models\User;
+use App\Models\VungMien;
+use App\Models\CuaHang;
+
 class PageController extends Controller
 {
     //
@@ -60,12 +64,22 @@ class PageController extends Controller
         return view('pages.dangnhap');
     }
     function postDangNhap(Request $request){
-        $this->validate($request,array(
-            'username'=>'required',
-            'password'=>'required|min:8|max:255',
+       $this->validate($request,
+                                [
+                                    'username'     => 'required',
+                                    'password'     =>'required|min:5|max:32'
 
-            ));
-        if(Auth::attempt(['username'=>$request->username,'password'=>$request->password])){
+                                ],
+                                [
+                                    'username.required'    => 'Bạn Chưa Nhập Username',
+                                    'password.required'    => 'Bạn Chưa Nhập Password',
+                                    'password.min'         => 'Password > 5 ký tự',
+                                    'password.max'         => 'Password <32 Ký tự'
+
+                                ]);
+
+        if(Auth::attempt(['username'=>$request->username,
+                          'password'=>$request->password])){
                 return redirect('trangchu');
         }else{
             return redirect('dangnhap')->with('thongbao','Đăng nhâp không thành công');
@@ -82,8 +96,8 @@ class PageController extends Controller
         $this->validate($request,[
             'username'=>'required|min:3:max:30|unique:users,username',
             'email'=>'required|email|unique:users,email',
-            'password'=>'required|min:8|max:32',
-            'passwordAgain'=>'required|min:8:max:32|same:password'
+            'password'=>'required|min:4|max:32',
+            'passwordAgain'=>'required|min:4:max:32|same:password'
            
             ],
             [
@@ -93,8 +107,8 @@ class PageController extends Controller
             'email.email'=>'Email không hợp lệ',
             'email.unique'=>'Email đã tồn tại',
             'password.required'=>'Bạn chưa nhập mật khẩu',
-            'password.min'=>'Mật khẩu từ 8-32 kí tự',
-            'password.max'=>'Mật khẩu từ 8-32 kí tự',
+            'password.min'=>'Mật khẩu từ 4-32 kí tự',
+            'password.max'=>'Mật khẩu từ 4-32 kí tự',
             
             'passwordAgain.required'=>'Bạn chưa nhập lại password',
             'passwordAgain.same'=>'Mật khẩu không khớp',
@@ -144,8 +158,8 @@ class PageController extends Controller
         $user->profile=$request->profile;
         if($request->changePassword == "on"){
             $this->validate($request,array(
-                'password'=>'required|min:8|max:32',
-                'passwordAgain'=>'required|min:8|max:32|same:password',
+                'password'=>'required|min:4|max:32',
+                'passwordAgain'=>'required|min:4|max:32|same:password',
                 ));
             $user->password=bcrypt($request->password);
         }

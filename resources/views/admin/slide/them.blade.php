@@ -28,15 +28,15 @@
                    
                     <div class="form-group">
                         <label>Tên Slide</label>
-                        <input class="form-control" name="txtTen" placeholder="Vui Lòng Nhập Tên Cho Slide.." />
+                        <input class="form-control" name="ten" placeholder="Vui Lòng Nhập Tên Cho Slide.." />
                     </div>
                     <div class="form-group">
                         <label>Nội Dung</label>
-                        <textarea id="demo" class="form-control ckeditor" rows="3" name="taNoiDung"></textarea>
+                        <textarea id="demo" class="form-control ckeditor" rows="3" name="NoiDung"></textarea>
                     </div>
                     <div class="form-group">
                         <label>Link</label>
-                        <input class="form-control" name="txtLink" placeholder="Vui Lòng Nhập Tên Link ..." />
+                        <input class="form-control" name="link" placeholder="Vui Lòng Nhập Tên Link ..." />
                     </div>
                     <div class="form-group">
                         <label>Hình Ảnh</label>

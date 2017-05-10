@@ -24,7 +24,8 @@
                             {!! $cuahang->gioi_thieu !!}
                         </p>
                     </div>
-                    <h3><span class="glyphicon glyphicon-align-center"></span>Link:</h3>
+                    <hr style="padding: 10px;">
+                    <h3><span class="glyphicon glyphicon-link">Link:<b align="center">Web Site Của Cửa Hàng</b></span></h3>
                     <div class="media-heading list-group-item-info">
                         <a href="{{ $cuahang->link }}" target="_blank">
                          <h4 style="color:blue;text-align:left;">
@@ -33,9 +34,8 @@
                          </p>
                         </a>
                     </div>
+                    <hr>
                     <br><br>
-                    <h3><span class="glyphicon glyphicon-link">Vị Trí:</h3>
-
                     <h3><span class="glyphicon glyphicon-globe"></span> Bản đồ</h3>
                     <div class="break container"></div><br>
                      <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCeNkdz8H9gRA5kmf605jC2xaniq55lhns&q={{$cuahang->vi_chi}}"

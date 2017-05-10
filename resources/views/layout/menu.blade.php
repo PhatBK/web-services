@@ -2,7 +2,7 @@
 <div class="col-md-3 ">
         <ul class="list-group" id="menu">
                 <li href="#" class="list-group-item menu1 active">
-                <span class="glyphicon glyphicon-th-list"></span>Menu
+                <span class="glyphicon glyphicon-th-list"></span>Thể Loại
                 </li>
             @foreach ($theloai as $tl)
                 @if(count($tl->loaimon) > 0)

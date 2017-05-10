@@ -18,6 +18,8 @@
                                 <br>
                                 <img width="200px" height="200px" class="img-responsive" src="upload/monan/{{$ma->Hinh}}" alt="">
                             </a>
+                            <hr>
+                            <p><span class="glyphicon glyphicon-time"></span>Ngày Đăng: {{$ma->created_at}}</p>
                         </div>
 
                         <div class="col-md-9">

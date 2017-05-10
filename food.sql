@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 10, 2017 lúc 12:49 CH
+-- Thời gian đã tạo: Th5 10, 2017 lúc 01:28 CH
 -- Phiên bản máy phục vụ: 10.1.21-MariaDB
 -- Phiên bản PHP: 7.0.15
 
@@ -142,7 +142,8 @@ INSERT INTO `loaimon` (`id`, `ten`, `ten_khong_dau`, `id_TheLoai`, `created_at`,
 (27, 'Món Từ Lưỡng Cư', 'mon-tu-luong-cu', 16, '2017-05-09 03:46:42', '2017-05-09 03:51:29'),
 (28, 'Làm Từ Bánh', 'lam-tu-banh', 2, '2017-05-09 09:34:41', '2017-05-09 09:34:41'),
 (29, 'Làm Từ Kẹo', 'lam-tu-keo', 2, '2017-05-09 09:34:57', '2017-05-09 09:34:57'),
-(30, 'Cá Biển', 'ca-bien', 5, '2017-05-09 16:36:48', '2017-05-09 16:36:48');
+(30, 'Cá Biển', 'ca-bien', 5, '2017-05-09 16:36:48', '2017-05-09 16:36:48'),
+(31, 'Làm Từ Động Thực Vật', 'lam-tu-dong-thuc-vat', 10, '2017-05-10 10:56:22', '2017-05-10 10:56:22');
 
 -- --------------------------------------------------------
 
@@ -344,7 +345,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `level`, `master`, `profile`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'phatbk', 'phatsn11081996@gmail.com', '$2y$10$DTGddzqEA57l.ywUokarNOOBoQ5/ouGKcaDrBGfyaiG9nzBKzrEyS', 1, 25, ' Dep trai,ngoan ngoan,cham chi,hiện tại vẫn độc thân,một vài năm nữa sẽ có bạn gái  trong một vài năm nữa\r\n                        \r\n                        ', 'hUjGfFfxzJseFbVXiGuQl57XC0rPlLQ8lPvHlKhuWaSvILTel26YmGll7JCj', '2017-05-01 03:48:25', '2017-05-09 04:19:36'),
+(1, 'phatbk-IT', 'phatsn11081996@gmail.com', '$2y$10$kzXuAFZQ0KE6oxzGmJHhHeozokpMHEXT31bVOaZkh9FmQKQzM1uPK', 1, 20, 'Dep trai,ngoan ngoan,cham chi,hiện tại vẫn độc thân,một vài năm nữa sẽ có bạn gái  trong một vài năm nữa', 'wUxebB29uAx3Oc57196R2tJyNQNJLoUdnNuKXfIbu7To2S74pIXt8MVnzOhF', '2017-05-01 03:48:25', '2017-05-10 11:25:49'),
 (2, 'phat96', 'phatnguyen11081996@gmail.com', '$2y$10$IUArQ4G.UEdurOjfwp8NB.v1QepVSxtzplHILym0gEtJlvTj9Mcbq', 1, 10, '-Tuổi:21\r\n-Nghề Nghiệp:Kỹ Sư\r\n-Tình Trạng:Độc Thân', 'S6Y4sZ1WFtKQnzCYyqwH5EJZroPzt9RKsOEKaMJI2dwkMD3p8evKgZu0Uyj7', '2017-05-01 10:57:37', '2017-05-01 15:38:17'),
 (5, 'nghia_sike', 'nghiatran@gmail.com', '$2y$10$6GhXTxZgxPzd9jjJideMiOaHFw9IK7yCUDIIKvdv/vqzvW1mAsc06', 1, 20, '-Bình thường', 'hECYl53oBoxgP3jwNVN2xaAKXdTSo1wsDphzCUGjLFMCRuQDc32vxoU07T7y', '2017-05-01 11:00:04', '2017-05-02 02:18:43'),
 (6, 'trung_shit', 'trung@gmail.com', '$2y$10$jU.2jH1oPpk4CkR9v7VGUO.GgL79lHGItFQpdLmI6o0u2OIavLdI6', 3, 31, '-Đồ tể Chính Hãng', 'qbCcxq3WhOHYIoqyOXei6RPyT3QXr5uFgQf2WSxHjkNYZsuoQAMB5UJFtDcm', '2017-05-01 11:00:37', '2017-05-09 04:16:48'),
@@ -362,7 +363,7 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`, `level`, `master`, `
 (20, 'phunhb', 'phunhb@bkav.com', '$2y$10$OOdcqBb.07sBkICfLnueduOUeEKOCabYPFa0hrmh5RN1H23A3oIre', 1, 2, 'fssffsfs', NULL, '2017-05-09 13:59:40', '2017-05-09 16:31:16'),
 (21, 'Lac Troi', 'lactroi@gmail.com', '$2y$10$bGOagWd0.fHqNZPWcA28U.QDmXD0ctadzXBmrxyW2Wv6NQ0tg2ABe', 3, 23, 'lạc trôi về nới đâu', NULL, '2017-05-10 06:24:15', '2017-05-10 06:24:15'),
 (22, 'Vô Hình Trong Tim em', 'vh@gmail.com', '$2y$10$2TpbS4kqS7XbMJ634QU3c.durzZIAOWgqf0fEIATGspCv0ef/B6xy', 3, 26, 'em là ai trong cuộc đời này', NULL, '2017-05-10 06:25:01', '2017-05-10 06:25:01'),
-(23, 'phatsn', '20143397@student.hust.edu.vn', '$2y$10$Mpb4Z6SsS2LcTJn0C.K3zepKhjI/Se7ZkYetR2D3lkaE2GnUbwc7e', 0, 0, 'Xây Dựng Hệ Thống:Web site giới thiệu,quảng bá món ăn các vùng miền', 'CFkEpPvjnw9YqHZarSUNJyCIVDhq9WO1vosuBLuvPSl2cCmUwXfU0FQslOBP', '2017-05-10 06:32:33', '2017-05-10 06:32:33');
+(24, 'sinhvienbk', 'sinhvienbk@gmail.com', '$2y$10$MnMOj2DSllJOijXe72ErLOyoSyBYjZj1akQ3fz5yGvkyLIRyMYJWW', 0, 0, 'Ngoan,học giỏi,tốt bụng,thẳng thắn...', NULL, '2017-05-10 11:17:37', '2017-05-10 11:22:10');
 
 -- --------------------------------------------------------
 
@@ -476,7 +477,7 @@ ALTER TABLE `cuahang`
 -- AUTO_INCREMENT cho bảng `loaimon`
 --
 ALTER TABLE `loaimon`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 --
 -- AUTO_INCREMENT cho bảng `monan`
 --
@@ -496,7 +497,7 @@ ALTER TABLE `theloai`
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT cho bảng `vungmien`
 --

@@ -68,6 +68,13 @@
                             @endif
                               type="radio">Admin-add
                         </label>
+                        @if ($user->level == 0)
+                        <label class="radio-inline">
+                            <input name="level" value="0"
+                                    {{"checked"}}
+                                  type="radio"> Super-Admin
+                        </label>
+                        @endif
                     </div>
                     <button type="submit" class="btn btn-default">Sửa</button>
                     <button type="reset" class="btn btn-default">Đặt Lại Mặc Định</button>

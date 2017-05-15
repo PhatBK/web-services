@@ -39,7 +39,7 @@
                     <h3><span class="glyphicon glyphicon-globe"></span> Bản đồ</h3>
                     <div class="break container"></div><br>
                      <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCeNkdz8H9gRA5kmf605jC2xaniq55lhns&q={{$cuahang->vi_chi}}"
-                     width="820" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+                     width="820" height="500" frameborder="0" style="border:0;" allowfullscreen></iframe>
                 </div>
             </div>
         </div>

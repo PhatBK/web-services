@@ -1,7 +1,7 @@
   @extends('layout.index')
   <!-- Page Content -->
   @section('content')
-    <div class="container">
+    <div class="container" id="search_content">
         <div class="row">
           @include('layout.menu')
          
@@ -10,6 +10,7 @@
                     <div class="panel-heading" style="background-color:#337AB7; color:white;">
                         <h4><b>Tìm kiếm:{{$tukhoa}}</b></h4>
                     </div>
+                    <div id='search_content'>
                     @foreach($monanTim as $ma)
                     <div class="row-item row">
                         <div class="col-md-3">
@@ -28,6 +29,7 @@
                         <div class="break"></div>
                     </div>
                      @endforeach
+                     </div>
                    
 
                 </div>

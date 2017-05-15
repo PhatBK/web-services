@@ -33,7 +33,7 @@
 				  		$nguoidung=Auth::user();
 
 				  		?>
-				    	<form action="nguoidung" method="post">
+				    	<form action="nguoidung" method="post" enctype="multipart/form-data">
 				    		<input type="hidden" name="_token" value="{{csrf_token()}}">
 				    		<div>
 				    			<label>Họ tên</label>
@@ -52,6 +52,14 @@
 							</div>
 							<br>	
 							<div>
+							<div>
+							<label>Cập nhật ảnh đại diên</label>
+                        	<input type="file" name="avatar" class="form-control" />
+                        	<br>
+								
+
+
+							</div>	
 								<input type="checkbox"  name="changePassword" id="changePassword">
 				    			<label>Đổi mật khẩu</label>
 							  	<input type="password" class="form-control password" name="password" aria-describedby="basic-addon1" disabled="">

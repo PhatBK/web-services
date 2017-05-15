@@ -30,7 +30,7 @@
 
 				  	@endif
 				  	<div class="panel-body">
-				    	<form action="dangky" method="POST">
+				    	<form action="dangky" method="POST" enctype="multipart/form-data">
 				    		<div>
 				    			<input type="hidden" name="_token" value="{{csrf_token()}}">
 				    			<label>Username</label>
@@ -47,7 +47,15 @@
 							  	<textarea  class="form-control" rows="5" name="profile" placeholder="Nhập profile"></textarea
 							  	>
 							</div>
-							<br>	
+							<br>
+							<div>
+							<label>Ảnh đại diên</label>
+                        	<input type="file" name="avatar" class="form-control" />
+                        	<br>
+								
+
+
+							</div>	
 							<div>
 								
 				    			<label>Nhập mật khẩu</label>

@@ -39,7 +39,10 @@
                 <tbody>
                     @foreach ($user as $us)
                     <tr class="odd gradeX" align="center">
-                        <td>{{$us->id}}</td>
+                        <td><p>{{$us->id}}</p>
+                        
+                        <img src="{{$us->avatar}}" width="50px" height="50px" />
+                        </td>
                         <td>{{$us->username}}</td>
                         <td>{{$us->email}}</td>
                         <td>{{$us->password}}</td>

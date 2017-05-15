@@ -51,10 +51,11 @@ class PageController extends Controller
         $monan->SoLuotXem=$view;
         $monan->save();
 
-        $monlienquan=MonAn::where('id_LoaiMon','=',$monan->id_LoaiMon)->orderBy('id','desc')->take(4)->get();
-        $comment=Comment::where('id_MonAn',$id)->orderBy('created_at','desc')->get();
+        $monlienquan=MonAn::where('id_LoaiMon',$monan->id_LoaiMon)->orderBy('id','desc')->take(4)->get();
         $monnoibat=MonAn::where('NoiBat',1)->take(4)->get();
-
+        
+        $comment=Comment::where('id_MonAn',$id)->orderBy('created_at','desc')->get();
+        
         return view('pages.monan',['monan'=>$monan,
                                    'comment'=>$comment,
                                    'monlienquan'=>$monlienquan,
@@ -97,7 +98,8 @@ class PageController extends Controller
             'username'=>'required|min:3:max:30|unique:users,username',
             'email'=>'required|email|unique:users,email',
             'password'=>'required|min:4|max:32',
-            'passwordAgain'=>'required|min:4:max:32|same:password'
+            'passwordAgain'=>'required|min:4:max:32|same:password',
+            'avatar'=>'required|image',
            
             ],
             [
@@ -112,6 +114,8 @@ class PageController extends Controller
             
             'passwordAgain.required'=>'Bạn chưa nhập lại password',
             'passwordAgain.same'=>'Mật khẩu không khớp',
+            'avatar.required'=>'Bạn chưa chọn ảnh đại diện',
+            'avatar.image'=>'Ảnh đại diện không hợp lệ',
 
 
             ]);
@@ -122,6 +126,19 @@ class PageController extends Controller
         $user->level=3;
 		$user->master=0;
 		$user->profile=$request->profile;
+        /*
+            Lưu ảnh đại diện
+        */
+        $file=$request->file('avatar');
+        $filename=$file->getClientOriginalName();
+        $Hinh=str_random(4).$filename;
+        while (file_exists('avatar/'.$Hinh)) {
+            # code...
+             $Hinh=str_random(4).$filename;
+
+        }
+        $user->avatar="avatar/".$Hinh;
+        $file->move('avatar',$Hinh);
         $user->save();
         return redirect('dangky')->with('thongbao','Đăng ký thành công');
     }
@@ -162,6 +179,29 @@ class PageController extends Controller
                 'passwordAgain'=>'required|min:4|max:32|same:password',
                 ));
             $user->password=bcrypt($request->password);
+        }
+        if($request->hasFile('avatar')){
+            $this->validate($request,[
+                'avatar'=>'image'
+                ],
+                [
+                'avatar.image'=>'Ảnh đại diện không hợp lệ',
+                ]);
+            $file=$request->file('avatar');
+            $filename=$file->getClientOriginalName();
+            $Hinh=str_random(4).$filename;
+            while(file_exists('avatar/'.$Hinh)){
+                $Hinh=str_random(4).$filename;
+
+            }
+            if($user->avatar !=null){
+               unlink($user->avatar); 
+            }
+            
+            $user->avatar='avatar/'.$Hinh;
+            $file->move('avatar',$Hinh);
+
+
         }
         $user->save();
         return redirect('nguoidung')->with('thongbao','Sửa thông tin thành công');

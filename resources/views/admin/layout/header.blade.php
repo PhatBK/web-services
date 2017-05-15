@@ -10,15 +10,20 @@
                 <a class="navbar-brand" href="{{ url('admin/theloai/danhsach') }}">Admin - BK Food</a>
             </div>
             <!-- /.navbar-header -->
-
+           
+                  
             <ul class="nav navbar-top-links navbar-right">
+
                 <!-- /.dropdown -->
                 <li class="dropdown">
+
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    <img src="{{Auth::user()->avatar}}" height="35px" width="35px"/>
+                         <i class="fa fa-caret-down"></i>
                     </a>
                    <ul class="dropdown-menu dropdown-user">
                         @if (Auth::user())
+
                             <li>
                               <a><i class="fa fa-user fa-fw"></i>{{Auth::user()->username}}</a>
                             </li>

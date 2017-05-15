@@ -35,7 +35,7 @@
                         <br><br>
                         <h3><span class="glyphicon glyphicon-globe"></span> Bản đồ</h3>
                         <div class="break"></div><br>
-                        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCeNkdz8H9gRA5kmf605jC2xaniq55lhns&q=BachKhoaHaNoi,HaNoi,VietNam" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCeNkdz8H9gRA5kmf605jC2xaniq55lhns&q=BachKhoaHaNoi,HaNoi,VietNam" width="820" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 					</div>
 	            </div>

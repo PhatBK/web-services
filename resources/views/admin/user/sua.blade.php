@@ -23,7 +23,7 @@
                     {{session('thongbao')}}
                 </div>
                 @endif
-                <form action="admin/user/sua/{{$user->id}}" method="POST">
+                <form action="admin/user/sua/{{$user->id}}" method="POST"  enctype="multipart/form-data">
                     <input type="hidden" name="_token" value="{{csrf_token()}}" />
                     <div class="form-group">
                         <label>Tên Người Dùng</label>
@@ -52,6 +52,14 @@
                             {{$user->profile}}
                         </textarea>
                     </div>
+                    <div>
+                            <label>Ảnh đại diên</label>
+                            <input type="file" name="avatar" class="form-control" />
+                            <br>
+                                
+
+
+                            </div>  
                     <div class="form-group">
                         <label>Level:</label>
                         <label class="radio-inline">

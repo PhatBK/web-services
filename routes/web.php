@@ -84,6 +84,7 @@ Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 
 	Route::group(['prefix'=>'ajax'],function(){
 		Route::get('loaimon/{idTheLoai}','AjaxController@getLoaiMon');
+		Route::get('search/{tukhoa}','AjaxController@search');
 	});
 });
 Route::get('trangchu','PageController@trangchu');
@@ -110,3 +111,22 @@ Route::get('timkiem','PageController@getTimKiem');
 Route::get('vungmien/{id}/{TenKhongDau}.html','PageController@getVungMien');
 //Route::get('teambk',                 'PageController@getTeam');
 Route::get('cuahang/{id}/{TenKhongDau}.html',  'PageController@cuahang');
+/*
+Login With Facebook
+*/
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+/*
+Facebook Login
+*/
+Route::get('auth/facebook', 'FacebookController@redirectToProvider')->name('facebook.login');
+Route::get('auth/facebook/callback', 'FacebookController@handleProviderCallback');
+/*
+google login
+*/
+Route::get('auth/google','GoogleController@redirectToProvider')->name('google.login');
+Route::get('auth/google/callback','GoogleController@handleProviderCallback');
+

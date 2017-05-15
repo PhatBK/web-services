@@ -26,7 +26,8 @@ class UserController extends Controller
 									'username'  =>    'required|unique:users,username|min:5',
 									'email'      =>    'required|email|unique:users,email', 
 									'password'      =>    'required|min:5|max:32',
-									'passwordAgain'    =>    'required|same:password'
+									'passwordAgain'    =>    'required|same:password',
+									'avatar'=>'required|image',
 								],
 								[
 									'username.required'  =>  'Chưa Nhập Tên Người Dùng',
@@ -41,7 +42,9 @@ class UserController extends Controller
 									'password.max'           =>  'Mật khẩu phải <32 lý tự',
 
 									'passwordAgain.required'    =>  'Chưa xác nhận mật khẩu',
-									'passwordAgain.same'        =>  'Mật Khẩu Xác Nhận không đúng'
+									'passwordAgain.same'        =>  'Mật Khẩu Xác Nhận không đúng',
+									'avatar.required'=> 'Bạn chưa chọn ảnh đại diện',
+									'avatar.image'=>'Ảnh đại diện không hợp lệ',
 								]);
 		$user = new User;
 		$user->username = $request->username;
@@ -50,6 +53,16 @@ class UserController extends Controller
 		$user->master = $request->master;
 		$user->profile = $request->profile;
 		$user->level = $request->level;
+		$file=$request->file('avatar');
+		$filename=$file->getClientOriginalName();
+		$Hinh=str_random(4).$filename;
+		while(file_exists('avatar/'.$Hinh)){
+			$Hinh=str_random(4).$filename;
+		}
+		$file->move('avatar',$Hinh);
+		$user->avatar='avatar/'.$Hinh;
+
+
 
 		$user->save();
 
@@ -69,7 +82,7 @@ class UserController extends Controller
 	public function postSua(Request $request,$id){
 		$this->validate($request,
 								[
-									'username'  =>    'required|unique:users,username|min:5'
+									'username'  =>    "required|unique:users,username,$id|min:5"
 								],
 								[
 									'username.required'  =>  'Chưa Nhập Tên Người Dùng',
@@ -97,6 +110,27 @@ class UserController extends Controller
 									'passwordAgain.same'        =>  'Mật Khẩu Xác Nhậ không đúng'
 								]);
 			$user->password = bcrypt($request->password);
+		}
+		if($request->hasFile('avatar')){
+			$this->validate($request,[
+				'avatar'=>'image',
+
+				],[
+				'avatar.image'=>'Ảnh đại diện không hợp lệ',
+				]);
+			$file=$request->file('avatar');
+			$filename=$file->getClientOriginalName();
+			$Hinh=str_random(4).$filename;
+			while(file_exists('avatar/'.$Hinh)){
+				$Hinh=str_random(4).$filename;
+
+			}
+			if($user->avatar !=null){
+				unlink($user->avatar);
+			}
+			
+			$file->move('avatar',$Hinh);
+			$user->avatar='avatar/'.$Hinh;
 		}
 		$user->save();
 
@@ -142,8 +176,13 @@ class UserController extends Controller
 		$userLogin = Auth::user();
 
 		if($userLogin->level == 0){
-			$user->delete();
-		    return redirect('admin/user/danhsach')->with('thongbao','Xóa user thành công...');
+			if($userLogin  == $user){
+				return redirect('admin/user/danhsach')->with('thongbaoloi','Không thể xóa Super-Admin, Admin khác hoặc chính tài khoản của bạn...');
+			}
+			else{
+				$user->delete();
+		    	return redirect('admin/user/danhsach')->with('thongbao','Xóa user thành công...');
+			}
 		}
 		if(($user == $userLogin) || ($user->level == 1)){
 			return redirect('admin/user/danhsach')->with('thongbaoloi','Không thể xóa Super-Admin, Admin khác hoặc chính tài khoản của bạn...');

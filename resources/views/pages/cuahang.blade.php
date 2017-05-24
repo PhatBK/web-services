@@ -1,17 +1,12 @@
 @extends('layout.index')
 @section('content')
 
-<div class="container">
-
+<div class="container"
    @include('layout.slide')
-
     <div class="space20"></div>
     <div class="row main-left">
-
         @include('layout.menu')
-
         <div class="col-md-9">
-
             <div class="panel panel-default">
                 <div class="panel-heading" style="background-color:#337AB7; color:white;" >
                     <h2 style="margin-top:0px; margin-bottom:0px;">{{ $cuahang->ten }}</h2>
@@ -25,8 +20,9 @@
                         </p>
                     </div>
                     <hr style="padding: 10px;">
-                    <h3><span class="glyphicon glyphicon-link">Link:<b align="center">Web Site Của Cửa Hàng</b></span></h3>
-                    <div class="media-heading list-group-item-info">
+                    <h3><span><marquee bgcolor="#00FF33" behavior="alternate">Web Site Của Cửa Hàng</marquee></span></h3>
+                    <div class="info">
+                        <p style="text-align: center;color: red;font-size: 20px;">Link:</p>
                         <a href="{{ $cuahang->link }}" target="_blank">
                          <h4 style="color:blue;text-align:left;">
                          <p align="center">

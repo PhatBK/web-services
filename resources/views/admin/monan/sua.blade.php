@@ -101,6 +101,10 @@
                         </textarea>
                     </div>
                     <div class="form-group">
+                    <label>Link Video hướng dẫn</label>
+                    <input class="form-control" name="link" placeholder="Nhập link video hướng dẫn" value="{{$monan->link}}"/>
+                    </div>
+                    <div class="form-group">
                         <label>Nổi Bật</label>
                         <label class="radio-inline">
                             <input name="NoiBat" value="1" 

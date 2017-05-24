@@ -125,6 +125,11 @@ return [
     'log_level' => env('APP_LOG_LEVEL', 'debug'),
 
     /*
+        Phầ Thêm Thư Viện Memcached để cache dữ liệu
+     */
+    'Swiggles\Memcache\MemcacheServiceProvider',
+
+    /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers
     |--------------------------------------------------------------------------

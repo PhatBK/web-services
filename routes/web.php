@@ -84,9 +84,12 @@ Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 
 	Route::group(['prefix'=>'ajax'],function(){
 		Route::get('loaimon/{idTheLoai}','AjaxController@getLoaiMon');
-		Route::get('search/{tukhoa}','AjaxController@search');
 	});
+
 });
+
+
+
 Route::get('trangchu','PageController@trangchu');
 Route::get('lienhe','PageController@lienhe');
 Route::get('gioithieu','PageController@getGioiThieu');
@@ -104,19 +107,18 @@ Route::post('binhluan/{id}','PageController@postBinhLuan');
 Route::get('nguoidung','PageController@getNguoiDung');
 Route::post('nguoidung','PageController@postNguoiDung');
 
-Route::post('timkiem','PageController@postTimKiem');
-Route::get('timkiem','PageController@getTimKiem');
+Route::post('timkiem/tu-khoa={tukhoa}.html','PageController@postTimKiem');
+Route::get('timkiem/tu-khoa={tukhoa}.html','PageController@getTimKiem');
 
 
 Route::get('vungmien/{id}/{TenKhongDau}.html','PageController@getVungMien');
-//Route::get('teambk',                 'PageController@getTeam');
 Route::get('cuahang/{id}/{TenKhongDau}.html',  'PageController@cuahang');
+
 /*
 Login With Facebook
 */
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
 
 /*
@@ -130,3 +132,20 @@ google login
 Route::get('auth/google','GoogleController@redirectToProvider')->name('google.login');
 Route::get('auth/google/callback','GoogleController@handleProviderCallback');
 
+
+
+
+/*
+	Phan goi Ajax cho toan bo cac trang
+ */
+Route::group(['prefix'=>'ajaxfull'],function(){
+
+	Route::get('timmonan/{tukhoa}',		'AjaxFullController@getTimKiemMonAn');
+	Route::post('timmonan/{tukhoa}',	'AjaxFullController@postTimKiemMonAn');
+
+	Route::get('comment/{id}',			'AjaxFullController@getComment');
+	Route::post('comment/{id}',			'AjaxFullController@postComment');
+
+	Route::get('loaimon/{id}',		'AjaxFullController@getLoaiMon');
+	Route::post('loaimon/{id}',		'AjaxFullController@postLoaiMon');
+});

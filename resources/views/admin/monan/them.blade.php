@@ -52,11 +52,11 @@
                     </div>
                     <div class="form-group">
                         <label>Tiêu Đề</label>
-                        <input class="form-control" name="TieuDe" placeholder="Vui Lòng Nhập Tiêu Đề.." />
+                        <input class="form-control" name="TieuDe" placeholder="Vui Lòng Nhập Tiêu Đề.." required/>
                     </div>
                     <div class="form-group">
                         <label>Tên Món</label>
-                        <input class="form-control" name="TenMon" placeholder="Vui Lòng Nhập Tên Món.." />
+                        <input class="form-control" name="TenMon" placeholder="Vui Lòng Nhập Tên Món.." required/>
                     </div>
                     <div class="form-group">
                         <label>Tóm Tắt</label>
@@ -68,11 +68,15 @@
                     </div>
                     <div class="form-group">
                         <label>Hình Ảnh</label>
-                        <input type="file" name="Hinh" class="form-control" />
+                        <input type="file" name="Hinh" class="form-control" required/>
                     </div>
                     <div class="form-group">
                         <label>Chú Ý Về Món Ăn </label>
                         <textarea class="form-control" rows="3" name="Chu_Y"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Link Video Hướng dẫn</label>
+                        <input class="form-control" name="link" placeholder="Vui lòng nhập link hướng dẫn món ăn.." required/>
                     </div>
                     <div class="form-group">
                         <label>Nổi Bật</label>

@@ -29,7 +29,7 @@
                    
                     <div class="form-group">
                         <label>Tên Cửa Hàng</label>
-                        <input class="form-control" name="ten" placeholder="Vui Lòng Nhập Tên Cửa Hàng Liên Kết.." />
+                        <input class="form-control" name="ten" placeholder="Vui Lòng Nhập Tên Cửa Hàng Liên Kết.." required />
                     </div>
                     <div class="form-group">
                         <label>Giới Thiệu</label>
@@ -37,11 +37,11 @@
                     </div>
                     <div class="form-group">
                         <label>Link</label>
-                        <input class="form-control" name="link" placeholder="Vui Lòng Nhập Link Liên Kết ..." />
+                        <input class="form-control" name="link" placeholder="Vui Lòng Nhập Link Liên Kết ..." required />
                     </div>
                     <div class="form-group">
                         <label>Vị Chí</label>
-                        <input class="form-control" name="vi_chi" placeholder="Vui Lòng Nhập Vị Chí Cửa Hàng..." />
+                        <input class="form-control" name="vi_chi" placeholder="Vui Lòng Nhập Vị Chí Cửa Hàng..." required />
                     </div>
                     <button type="submit" class="btn btn-default">Thêm Cửa Hàng</button>
                     <button type="reset" class="btn btn-default">Đặt Lại Mặc Định</button>

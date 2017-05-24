@@ -28,7 +28,7 @@
                    
                     <div class="form-group">
                         <label>Tên Slide</label>
-                        <input class="form-control" name="ten" placeholder="Vui Lòng Nhập Tên Cho Slide.." />
+                        <input class="form-control" name="ten" placeholder="Vui Lòng Nhập Tên Cho Slide.." required />
                     </div>
                     <div class="form-group">
                         <label>Nội Dung</label>
@@ -36,11 +36,11 @@
                     </div>
                     <div class="form-group">
                         <label>Link</label>
-                        <input class="form-control" name="link" placeholder="Vui Lòng Nhập Tên Link ..." />
+                        <input class="form-control" name="link" placeholder="Vui Lòng Nhập Tên Link ..." required />
                     </div>
                     <div class="form-group">
                         <label>Hình Ảnh</label>
-                        <input type="file" name="Hinh" class="form-control" />
+                        <input type="file" name="Hinh" class="form-control" required />
                     </div>
                     <button type="submit" class="btn btn-default">Thêm Slide</button>
                     <button type="reset" class="btn btn-default">Đặt Lại Mặc Định</button>

@@ -80,7 +80,6 @@ class SlideController extends Controller
                 $duoi = $file->getClientOriginalExtension();
                 if(($duoi != 'jpg') && ($duoi != 'png') && ($duoi != 'jpeg')){
                     return redirect('admin/slide/sua/'.$id)->with('loi',"Bạn phải nhập file ảnh..(đuôi là:jpg,png,jpeg");
-
                 }
                 $name = $file->getClientOriginalName();
                 $Hinh = str_random(4)."_".$name;
@@ -91,12 +90,8 @@ class SlideController extends Controller
                 $file->move("upload/slide",$Hinh);
                 $slide->Hinh = $Hinh;
         }
-
         $slide->save();
-
         return redirect('admin/slide/sua/'.$id)->with('thongbao','Đã Sửa Thành Công....');
-
-
     }
     public function getXoa($id){
     	$slide = Slide::find($id);

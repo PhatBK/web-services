@@ -4,7 +4,6 @@
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" >
                 <ol class="carousel-indicators" >
                 <?php $i=0; ?>
-                
                 @foreach ($slide as $sl)
                     <li data-target="#carousel-example-generic" data-slide-to="{{$i}}"
                         @if ($i == 0)
@@ -24,7 +23,9 @@
                                  class="item"
                             @endif
                         >
-                              <img class="slide-image" src="upload/slide/{{$sl->Hinh}}" alt="{{$sl->NoiDung}}" style="height: 350px; width: 1150px;">
+                        <a >
+                            <img class="slide-image" src="upload/slide/{{$sl->Hinh}}" alt="{{$sl->NoiDung}}" style="height: 350px; width: 1150px;">
+                        </a>
                         </div>
                     <?php $i++; ?>
                     @endforeach

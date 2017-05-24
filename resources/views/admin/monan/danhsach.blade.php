@@ -27,6 +27,7 @@
                                 <th>Tên Món</th>
                                 <th>Tóm Tắt</th>
                                 <th>Nội Dung</th>
+                                <th>Video Hướng dẫn</th>
                                 <th>Chú Ý</th>
                                 <th>Nổi Bật</th>
                                 <th>Số Lượt Xem</th>
@@ -48,6 +49,7 @@
                                 </td>
                                 <td>{!!$ma->TomTat!!}</td>
                                 <td>{!!$ma->NoiDung!!}</td>
+                                <td>{{$ma->link}}</td>
                                 <td>{{$ma->Chu_Y}}</td>
                                 <td>
                                     @if ($ma->NoiBat == 0)

@@ -28,7 +28,7 @@
                     
                     <div class="form-group">
                         <label>Tên Thể Loại</label>
-                        <input class="form-control" name="txtTen" placeholder="Vui Lòng Nhập Tên Thể Loại !!!" />
+                        <input class="form-control" name="txtTen" placeholder="Vui Lòng Nhập Tên Thể Loại !!!" required />
                     </div>
                     <button type="submit" class="btn btn-default">Thêm</button>
                     <button type="reset" class="btn btn-default">Đặt Lại Mặc Định</button>

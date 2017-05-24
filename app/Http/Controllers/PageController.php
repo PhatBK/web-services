@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use Illuminate\Validation;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation;
-
 use App\Models\TheLoai;
 use App\Models\Slide;
 use App\Models\LoaiMon;
@@ -18,7 +17,6 @@ use App\Models\CuaHang;
 
 class PageController extends Controller
 {
-    //
     function __construct(){
 
     	$slide          =  Slide::all();
@@ -33,7 +31,6 @@ class PageController extends Controller
         view()->share('cuahangAll',$cuahangAll);
     }
     function trangchu(){
-    	
     	return view('pages.trangchu');
     }
     function lienhe(){
@@ -45,24 +42,23 @@ class PageController extends Controller
         return view('pages.loaimon',['loaimon'=>$loaimon,'monan'=>$monan]);
     }
     function monan($id){
-
         $monan=MonAn::find($id);
         $view=$monan->SoLuotXem + 1;
         $monan->SoLuotXem=$view;
         $monan->save();
-
-        $monlienquan=MonAn::where('id_LoaiMon',$monan->id_LoaiMon)->orderBy('id','desc')->take(4)->get();
-        $monnoibat=MonAn::where('NoiBat',1)->take(4)->get();
-        
+        $monlienquan=MonAn::where('id_LoaiMon',$monan->id_LoaiMon)->orderBy('id','desc')->take(5)->get();
+        $monnoibat=MonAn::where('NoiBat',1)->take(5)->get();
         $comment=Comment::where('id_MonAn',$id)->orderBy('created_at','desc')->get();
-        
         return view('pages.monan',['monan'=>$monan,
                                    'comment'=>$comment,
                                    'monlienquan'=>$monlienquan,
                                    'monnoibat'=>$monnoibat]);
     }
     function getDangNhap(){
-        return view('pages.dangnhap');
+        if(Auth::check()){
+            return redirect('trangchu');
+        }else
+            return view('pages.dangnhap');
     }
     function postDangNhap(Request $request){
        $this->validate($request,
@@ -116,8 +112,6 @@ class PageController extends Controller
             'passwordAgain.same'=>'Mật khẩu không khớp',
             'avatar.required'=>'Bạn chưa chọn ảnh đại diện',
             'avatar.image'=>'Ảnh đại diện không hợp lệ',
-
-
             ]);
         $user=new User();
         $user->username=$request->username;
@@ -142,10 +136,13 @@ class PageController extends Controller
         $user->save();
         return redirect('dangky')->with('thongbao','Đăng ký thành công');
     }
+
     function postBinhLuan($id,Request $request){
+
         $this->validate($request,array(
             'NoiDung'=>'required|max:255',
             ));
+        
         $monan = Monan::find($id);
         $comment=new Comment();
         $comment->NoiDung=$request->NoiDung;
@@ -206,13 +203,20 @@ class PageController extends Controller
         $user->save();
         return redirect('nguoidung')->with('thongbao','Sửa thông tin thành công');
     }
-    function getTimKiem(){
-        return view('pages.timkiem');
+    function getTimKiem(Request $request){
+        $tukhoa = $request->tukhoa;
+        if($tukhoa == ""){
+            return redirect('trangchu');
+        }
+        $monan=MonAn::where('TenMon','like',"%$tukhoa%")->paginate(5);
+        return view('pages.timkiem',['tukhoa'=>$tukhoa,'monanTim'=>$monan]);
     }
     function postTimKiem(Request $request){
-       
         $tukhoa=$request->tukhoa;
-        $monan=MonAn::where('TieuDe','like',"%$tukhoa%")->get();
+        if($tukhoa == ""){
+            return redirect('trangchu');
+        }
+        $monan=MonAn::where('TenMon','like',"%$tukhoa%")->paginate(5);
         return view('pages.timkiem',['tukhoa'=>$tukhoa,'monanTim'=>$monan]);
     }
    function getGioiThieu(){

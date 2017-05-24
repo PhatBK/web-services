@@ -27,7 +27,7 @@
                     <input type="hidden" name="_token" value="{{csrf_token()}}" />
                     <div class="form-group">
                         <label>Tên Vùng Miền</label>
-                        <input class="form-control" name="txtTen" placeholder="Vui Lòng Nhập Tên Vùng Miền!!!" />
+                        <input class="form-control" name="txtTen" placeholder="Vui Lòng Nhập Tên Vùng Miền!!!" required />
                     </div>
                     <div class="form-group">
                         <label>Giới Thiệu Vùng Miền</label>

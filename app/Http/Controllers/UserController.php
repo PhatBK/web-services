@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation;
-
 use App\Models\User;
 use App\Models\Comment;
 
@@ -61,18 +60,13 @@ class UserController extends Controller
 		}
 		$file->move('avatar',$Hinh);
 		$user->avatar='avatar/'.$Hinh;
-
-
-
 		$user->save();
-
 		return redirect('admin/user/them')->with('thongbao','Thêm User thành công..');
-
-
 	}
 	public function getSua($id){
 		$userLogin = Auth::user();
 		$user = User::find($id);
+
 		if($userLogin != $user){
 			return redirect('admin/user/danhsach')->with('thongbaoloi','Bạn không thể sửa tài khoản khác..');
 		}else{
@@ -123,22 +117,16 @@ class UserController extends Controller
 			$Hinh=str_random(4).$filename;
 			while(file_exists('avatar/'.$Hinh)){
 				$Hinh=str_random(4).$filename;
-
 			}
 			if($user->avatar !=null){
 				unlink($user->avatar);
 			}
-			
 			$file->move('avatar',$Hinh);
 			$user->avatar='avatar/'.$Hinh;
 		}
 		$user->save();
-
 		return redirect('admin/user/sua/'.$id)->with('thongbao','Đã Sửa User thành Công..');
-
-
 	}
-	
 	public function getDangNhapAdmin(){
 		return view('admin.login');
 	}
@@ -154,7 +142,6 @@ class UserController extends Controller
 									'password.required' => 'Bạn Chưa Nhập Password',
 									'password.min'      => 'Password > 5 ký tự',
 									'password.max'      => 'Password <32 Ký tự'
-
 								]);
 		if(Auth::attempt([	'username'=> $request->username,
 							'password'=>$request->password])){
@@ -162,31 +149,27 @@ class UserController extends Controller
 		}else{
 			return redirect('admin/dangnhap')->with('thongbao','Đăng nhập thất bại ..');
 		}
-
 	}
 	public function getDangXuatAdmin(){
-
 		Auth::logout();
-
 		return redirect('admin/dangnhap');
 	}
     public function getXoa($id){
-
 		$user = User::find($id);
 		$userLogin = Auth::user();
-
 		if($userLogin->level == 0){
 			if($userLogin  == $user){
-				return redirect('admin/user/danhsach')->with('thongbaoloi','Không thể xóa Super-Admin, Admin khác hoặc chính tài khoản của bạn...');
+				return redirect('admin/user/danhsach')->with('thongbaoloi','Không thể xóa Super-Admin, Admin khác hoặc chính tài khoản đang đăng nhập...');
 			}
 			else{
 				$user->delete();
 		    	return redirect('admin/user/danhsach')->with('thongbao','Xóa user thành công...');
 			}
 		}
-		if(($user == $userLogin) || ($user->level == 1)){
-			return redirect('admin/user/danhsach')->with('thongbaoloi','Không thể xóa Super-Admin, Admin khác hoặc chính tài khoản của bạn...');
-		}if(($userLogin->level == 1) && ($user->level == 3)){
+		if(($userLogin->level == 1 && $user->level == 0) || ($user == $userLogin) || ($user->level == 1)){
+			return redirect('admin/user/danhsach')->with('thongbaoloi','Không thể xóa Super-Admin, Admin khác hoặc chính tài khoản đang đăng nhập...');
+		}
+		if(($userLogin->level == 1) && ($user->level == 3)){
 			$user->delete();
 		    return redirect('admin/user/danhsach')->with('thongbao','Xóa user thành công...');
 		}

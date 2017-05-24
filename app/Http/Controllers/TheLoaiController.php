@@ -15,15 +15,10 @@ class TheLoaiController extends Controller
     	$theloai = TheLoai::all();
     	return view('admin.theloai.danhsach',['theloai'=>$theloai]);
     }
-
     public function getThem(){
 
     	return view('admin.theloai.them');
-
     }
-    /*public function postThem(ThemTheLoaiRequest $request){
-
-    }*/
     public function postThem(Request $request){
         $this->validate($request,
             [
@@ -42,18 +37,12 @@ class TheLoaiController extends Controller
         $theloai->save();
         return redirect('admin/theloai/them')->with('thongbao','Đã Thêm Thành Công !!!');
     }
-
-
     public function getSua($id){
-
         $theloai = TheLoai::find($id);
     	return view('admin/theloai/sua',['theloai'=>$theloai]);
-
     }
     public function postSua(Request $request,$id){
-
         $theloai = TheLoai::find($id);
-        
         $this->validate($request,
                         [
                             'txtTen' => 'required|unique:TheLoai,ten|min:3|max:100'
@@ -66,9 +55,7 @@ class TheLoaiController extends Controller
         $theloai->ten = $request->txtTen;
         $theloai->ten_khong_dau = changeTitle($request->txtTen);
         $theloai->save();
-
         return redirect('admin/theloai/sua/'.$id)->with('thongbao','Đã Sửa Thành Công !!!');
-    	
     }
     public function getXoa($id){
         $theloai = TheLoai::find($id);

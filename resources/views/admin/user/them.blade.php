@@ -27,23 +27,23 @@
                     <input type="hidden" name="_token" value="{{csrf_token()}}" />
                     <div class="form-group">
                         <label>Tên Người Dùng</label>
-                        <input class="form-control" name="username" placeholder="Vui Lòng Nhập Tên Người Dùng !!!" />
+                        <input class="form-control" name="username" placeholder="Vui Lòng Nhập Tên Người Dùng !!!" required />
                     </div>
                     <div class="form-group">
                         <label>Địa Chỉ Email</label>
-                        <input type="email" class="form-control" name="email" placeholder="Vui Lòng Nhập Mail Người Dùng !!!" />
+                        <input type="email" class="form-control" name="email" placeholder="Vui Lòng Nhập Mail Người Dùng !!!" required />
                     </div>
                     <div class="form-group">
                         <label>Mật Khẩu</label>
-                        <input type="password" class="form-control" name="password" placeholder="Vui Lòng Nhập Password !!!" />
+                        <input type="password" class="form-control" name="password" placeholder="Vui Lòng Nhập Password !!!" required />
                     </div>
                     <div class="form-group">
                         <label>Xác Nhận Mật Khẩu</label>
-                        <input type="password" class="form-control" name="passwordAgain" placeholder="Vui Lòng Nhập Lại Password !!!" />
+                        <input type="password" class="form-control" name="passwordAgain" placeholder="Vui Lòng Nhập Lại Password !!!" required />
                     </div>
                     <div class="form-group">
                         <label>Trình Độ</label>
-                        <input class="form-control" name="master" placeholder="Vui Lòng Nhập Trình độ !!!" />
+                        <input class="form-control" name="master" placeholder="Vui Lòng Nhập Trình độ !!!" required />
                     </div>
                     <div class="form-group">
                         <label>Profile</label>
@@ -51,10 +51,9 @@
                     </div>
                     <div>
                             <label>Ảnh đại diên</label>
-                            <input type="file" name="avatar" class="form-control" />
+                            <input type="file" name="avatar" class="form-control" required />
                             <br>
-                      </div>  
-
+                    </div>  
                     <div class="form-group">
                         <label>Level:</label>
                         <label class="radio-inline">

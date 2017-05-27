@@ -17,19 +17,20 @@
 				    	<form action="dangnhap" method="POST">
 							<input type="hidden" name="_token" value="{{csrf_token()}}">
 							<div>
-				    			<label>Username</label>
+				    			<label>Tên Đăng Nhập:</label>
 							  	<input type="text" class="form-control" placeholder="Username" name="username" required
 							  	>
 							</div>
-							<br>	
 							<div>
-				    			<label>Mật khẩu</label>
+				    			<label>Mật Khẩu:</label>
 							  	<input type="password" class="form-control" name="password" required>
 							</div>
-							<br>
+							<br />				
 							<input  type="submit" class="form-control" value="Đăng nhập" />
-							<a href="{{route('facebook.login')}}" class="form-control" style="text-align: center;">Facebook Login</a>
-							<a href="{{route('google.login')}}" class="form-control" style="text-align: center;">Google+ Login</a>
+							<br />
+							<br />
+							<a href="{{route('facebook.login')}}" class="form-control" style="text-align: center;color: blue;">Facebook Login</a>
+							<a href="{{route('google.login')}}" class="form-control" style="text-align: center;color: red;">Google+ Login</a>
 							</button>
 				    	</form>
 				  	</div>

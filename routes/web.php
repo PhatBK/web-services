@@ -16,6 +16,7 @@ Route::get('admin/dangnhap',  'UserController@getDangNhapAdmin');
 Route::post('admin/dangnhap', 'UserController@postDangNhapAdmin');
 Route::get('admin/logout',    'UserController@getDangXuatAdmin');
 
+//Route dành cho thao tác của admin
 Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 	Route::group(['prefix'=>'theloai'],function(){
 		Route::get('danhsach',  'TheLoaiController@getDanhSach');
@@ -87,9 +88,7 @@ Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 	});
 
 });
-
-
-
+//Route dành cho thao tác của tất cả mọi người
 Route::get('trangchu','PageController@trangchu');
 Route::get('lienhe','PageController@lienhe');
 Route::get('gioithieu','PageController@getGioiThieu');
@@ -99,11 +98,14 @@ Route::get('monan/{id}/{TenKhongDau}.html','PageController@monan');
 
 Route::get('dangnhap','PageController@getDangNhap');
 Route::post('dangnhap','PageController@postDangNhap');
+
 Route::get('dangxuat','PageController@getDangXuat');
+
 Route::get('dangky','PageController@getDangKy');
 Route::post('dangky','PageController@postDangKy');
 
 Route::post('binhluan/{id}','PageController@postBinhLuan');
+
 Route::get('nguoidung','PageController@getNguoiDung');
 Route::post('nguoidung','PageController@postNguoiDung');
 
@@ -117,10 +119,8 @@ Route::get('cuahang/{id}/{TenKhongDau}.html',  'PageController@cuahang');
 /*
 Login With Facebook
 */
-
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
-
 /*
 Facebook Login
 */
@@ -131,10 +131,6 @@ google login
 */
 Route::get('auth/google','GoogleController@redirectToProvider')->name('google.login');
 Route::get('auth/google/callback','GoogleController@handleProviderCallback');
-
-
-
-
 /*
 	Phan goi Ajax cho toan bo cac trang
  */

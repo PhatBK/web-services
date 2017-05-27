@@ -39,9 +39,9 @@
                 <form class="navbar-form navbar-left" accept-charset="utf-8">
                     <button class="form-control" id="time"></button>
                 </form>
-                <form class="navbar-form navbar-left" accept-charset="utf-8">
+                {{-- <form class="navbar-form navbar-left" accept-charset="utf-8">
                     <button style="background-color: #EE9A49;" class="form-control" id="day"></button>
-                </form>
+                </form> --}}
                 <script type="text/javascript" language="javascript">
                     function startTime(){
 
@@ -50,11 +50,12 @@
                         var m = today.getMinutes();
                         var s = today.getSeconds();
 
-                        var d = today.getDate();
+                        /*var d = today.getDate();
                         var mon = today.getMonth() +1;
                         var yer = today.getFullYear();
-                        document.getElementById("day").innerHTML = d+"/"+mon+"/"+yer;
-                      
+                        document.getElementById("day").innerHTML = d+"/"+mon+"/"+yer;*/
+                        
+                        
                         m = checkTime(m);
                         s = checkTime(s);
                          document.getElementById("time").style.backgroundColor = "cyan";
@@ -82,8 +83,8 @@
                     @if(Auth::user())
                     <li>
                     	<a href="nguoidung">
-                            <img src="{{Auth::user()->avatar}}" style="height: 25px; width: 25px" />
                     		<!-- <span class ="glyphicon glyphicon-user" ></span> -->
+                            <img src="{{Auth::user()->avatar}}" style="height: 25px; width: 25px" />
                     		{{Auth::user()->username}}
                     	</a>
                     </li>
@@ -92,7 +93,7 @@
                     <li>
                     	<a href="dangxuat">Đăng xuất</a>
                     </li>
-                    @endif                
+                    @endif                              
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

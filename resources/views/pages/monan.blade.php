@@ -28,6 +28,7 @@
 <body onload="startTime()">
 
     @include('layout.header')
+
     <div id="fb-root"></div>
                 <script>(function(d, s, id) {
                       var js, fjs = d.getElementsByTagName(s)[0];
@@ -41,21 +42,22 @@
                 <div id="fb-root"></div>
 
                 <script>(function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.9";
-                fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'facebook-jssdk'));
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.9";
+                    fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));
                 </script>
-    <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.9";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
+                <script>
+                    (function(d, s, id) {
+                          var js, fjs = d.getElementsByTagName(s)[0];
+                          if (d.getElementById(id)) return;
+                          js = d.createElement(s); js.id = id;
+                          js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.9";
+                          fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));
+                </script>
     
     <!-- Page Content -->
     <div class="container">
@@ -74,16 +76,22 @@
                 <!-- Preview Image -->
                 <div class="form-group" style="border-top-left-radius: 5px;color: green;">
                      <img style="width: 850px;height: 400px;" class="img-responsive" src="upload/monan/{{$monan->Hinh}}" alt="">
-                </div>  
-                <br>
-            <!-- <img id='unlike' class="img-responsive center-block" style="margin-left: 5px;" src="upload/like.jpg" alt="" width="50px" height="50px" onclick="document.getElementById('unlike').src='upload/liked.jpg'">
- -->
-       <!-- Date/Time -->
+                </div> 
+
+                <div class="fb-like" data-href="http://localhost/Web-Service/public/monan/{{ $monan->id }}/{{ $monan->TieuDeKhongDau }}.html" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true">                  
+                </div> 
+
+                <p><span class="glyphicon glyphicon-eye-open"></span>Số Lượt Xem:<b style="color: red;">{{$monan->SoLuotXem }}</b>              
+                </p>
+                
+                <!-- Date/Time -->
                 <p><span class="glyphicon glyphicon-time"></span>Ngày Đăng: {{$monan->created_at}}</p>
-                <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true"  ></div>
                 <hr>
                 <!-- Post Content -->
+                <p style="font-size: 25px;text-align: center;color: orange;">Tóm Tắt:</p>
                 <p class="lead"><b>{!!$monan->TomTat!!}</b></p>
+                <br />
+                <p style="font-size: 25px;text-align: center;color: orange;">Cách Nấu Món Ăn:</p>
                 <p>{!!$monan->NoiDung!!}</p>
                 @if($monan->Chu_Y !=null)
                 <p><b>Chú Ý:{{$monan->Chu_Y}}</b></p>

@@ -4,7 +4,6 @@
     <div class="container" id="search_content">
         <div class="row">
           @include('layout.menu')
-         
             <div class="col-md-9 ">
                 <div class="panel panel-default">
                     <div class="panel-heading" style="background-color:#337AB7; color:white;">
@@ -28,7 +27,6 @@
                     </div>
                      @endforeach
                      </div>
-                
                 </div>
             </div> 
 
@@ -47,9 +45,7 @@
         <script src="{{asset('js/ajaxscript.js')}}"></script>
 </div>
   --}}
-
 @endsection
-
 @section('script')
     <script>
         $(document).ready(function(){

@@ -20,7 +20,7 @@
                         </p>
                     </div>
                     <hr style="padding: 10px;">
-                    <h3><span><marquee bgcolor="#00FF33" behavior="alternate">Web Site Của Cửa Hàng</marquee></span></h3>
+                    <h3 style="text-align: center;"><span class="glyphicon glyphicon-link"></span>Web Site Của Cửa Hàng</h3>
                     <div class="info">
                         <p style="text-align: center;color: red;font-size: 20px;">Link:</p>
                         <a href="{{ $cuahang->link }}" target="_blank">
@@ -32,7 +32,7 @@
                     </div>
                     <hr>
                     <br><br>
-                    <h3><span class="glyphicon glyphicon-globe"></span> Bản đồ</h3>
+                    <h3 style="text-align: center;"><span class="glyphicon glyphicon-globe"></span> Bản đồ</h3>
                     <div class="break container"></div><br>
                      <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCeNkdz8H9gRA5kmf605jC2xaniq55lhns&q={{$cuahang->vi_chi}}"
                      width="820" height="500" frameborder="0" style="border:0;" allowfullscreen></iframe>

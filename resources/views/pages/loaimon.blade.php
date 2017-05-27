@@ -22,7 +22,8 @@
                                 <br>
                                 <img width="200px" height="200px" class="img-responsive" src="upload/monan/{{$ma->Hinh}}" alt="">
                             </a>
-                            <hr>
+                            <p><span class="glyphicon glyphicon-eye-open"></span>Số Lượt Xem:<b style="color: red;">{{$ma->SoLuotXem}}</b>
+                            </p>                          
                             <a href="monan/{{$ma->id}}/{{$ma->TenMon}}.html">
                                 Món Ăn:<b>{{ $ma->TenMon }}</b>
                             </a>

@@ -9,15 +9,14 @@
             <div class="col-md-9">
 	            <div class="panel panel-default">            
 	            	<div class="panel-heading" style="background-color:green; color:white;" >
-	            	<!--<h2 style="margin-top:0px; margin-bottom:5px; padding-left: 250px;">Ẩm Thực Bách Khoa</h2>-->
-	            		<h2 style="margin-top:0px;color:#F9F400; margin-bottom:5px;text-align: center;font-size: 40px;">
+	            		<h2 style="margin-top:0px;margin-bottom:5px;text-align: center;font-size: 40px;" id="tieude">
 	            		ẨM THỰC BÁCH KHOA</h2>
 	            		<p align="center" style="font-size: 30px;font-style: oblique;" id="doimau">  Nấu Ăn Là Cả Một Nghệ Thuật  </p>
-
 	            		<script type="text/javascript" language="javascript">
 	            		    document.getElementById("doimau").addEventListener("mouseover",dung);
-	            		    //document.getElementById("doimau").addEventListener("mousedown",tiep);
 	            		    document.getElementById("doimau").addEventListener("mouseleave",tiep);
+	            		    //document.getElementById("tieude").addEventListener("mouseover",dung);
+	            		    //document.getElementById("tieude").addEventListener("mouseleave",tiep);
 	            		    var i = 1;
 	            		    var t ;
                             var colors = ['red','cyan','blue',
@@ -27,10 +26,16 @@
                                          ];	
 	            			function doimau(){
 	            				document.getElementById("doimau").style.color = colors[i];
-	            				i = Math.floor((Math.random() * 10)+5);
+	            				document.getElementById("tieude").style.color = colors[i+1];
+	            				var j = Math.floor((Math.random() * 10));
+	            				if( j<5){
+	            					i = j;
+	            				}else{
+	            					i  = j + 5;
+	            				}
 	            				t = setTimeout(function(){
 	            					doimau();
-	            				},500);
+	            				},100);
 	            			}
 	            			doimau();
 	            			function dung(){
@@ -39,11 +44,10 @@
 	            			function tiep(){
 	            				t = setTimeout(function(){
 	            					doimau();
-	            				},500);
+	            				},100);
 	            			}
 	            		</script>
-	            	</div>
-	            	
+	            	</div>	            	
 	            </div>
 	            	<div class="panel-body">
 	            		@foreach($theloai as $tl)
@@ -67,7 +71,8 @@
 			                        <a href="monan/{{$mon1['id']}}/{{$mon1['TenMon']}}.html">
 			                            <img class="img-responsive" src="upload/monan/{{$mon1['Hinh']}}" alt="" style="width: 220px;height: 200px;">
 			                        </a>
-			                        <hr>
+			                        <p><span class="glyphicon glyphicon-eye-open"></span>Số Lượt Xem:<b style="color: red;">{{$mon1['SoLuotXem']}}</b>
+			                        </p>			          			         
 			                        <a href="monan/{{$mon1['id']}}/{{$mon1['TenMon']}}.html">
 			                        	Món Ăn:<b>{{$mon1['TenMon']}}</b>
 			                        </a>
@@ -78,6 +83,7 @@
 			                    </div>
 			                    <div class="col-md-7">
 			                        <a href="monan/{{$mon1['id']}}/{{ $mon1['TieuDeKhongDau'] }}.html"><h3>{!!$mon1['TieuDe']!!}</h3></a>
+			                        <b>Tóm Tắt:</b>
 			                        <p>{!!$mon1['TomTat']!!}</p>
 			                        <a class="btn btn-primary" href="monan/{{$mon1['id']}}/{{ $mon1['TieuDeKhongDau'] }}.html">Chi tiết <span class="glyphicon glyphicon-chevron-right"></span></a>
 								</div>

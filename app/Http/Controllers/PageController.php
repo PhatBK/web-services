@@ -150,6 +150,7 @@ class PageController extends Controller
         $comment->id_User=Auth::user()->id;
         $comment->id_MonAn=$id;
         $comment->save();
+        //khi 
         $user=Auth::user();
         $master=$user->master +1;
         $user->master=$master;

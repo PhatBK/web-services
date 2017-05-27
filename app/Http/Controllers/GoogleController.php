@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Socialite;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Http\Request;
 
 
 class GoogleController extends Controller
@@ -15,7 +15,7 @@ class GoogleController extends Controller
      *
      * @return Response
      */
-    public function redirectToProvider()
+    public function redirectToProvider(Request $request)
     {
         return Socialite::driver('google')->redirect();
     }
@@ -25,7 +25,7 @@ class GoogleController extends Controller
      *
      * @return Response
      */
-    public function handleProviderCallback()
+    public function handleProviderCallback(Request $request)
     {
     	
         

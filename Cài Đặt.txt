@@ -1,0 +1,26 @@
+					hướng dẫn cài đặt:
+Cách 1:					
+					
+1/ cài server ảo:Xampp tại:https://www.apachefriends.org/index.html
+2/ cài Composer tại:https://getcomposer.org/
+3/ sau khi cài Xampp song,lên trình duyệt web vào đường dẫn:http://localhost/phpmyadmin/
+	- Tạo một cơ sở dữ liệu mới tên: food
+	- Import file:food.sql vào csdl  vừa tạo
+4/ Copy toàn bộ source của Web site vào thư mục : htdocs theo đường dẫn:   Xampp\htdocs\
+
+5/ Mở một trình duyệt web bất kỳ và nhập vào :http://localhost/Web-Service/public/trangchu
+	-đây là giao diện trang chủ phía người dùng
+6/ Mở một trình duyệt web bất kỳ và nhập vào:http://localhost/Web-Service/public/admin/dangnhap
+	- để đang nhập vào trang admin bạn cần nhập một tài khoản super-admin (tài khoản này không bị xóa): 
+																- username: sinhvienbk
+																- pass:123456789
+7/ Tiến hành các thao tác với quyền super-admin.
+
+Cách 2:
+	 - Tiến hành cài các công cụ như cách 1 cho đến bước 3
+	 - Bước 4 ta không cần thiết phải copy source vào thư mục htdocs
+	 - mở thư mục chứa mã nguồn--> Shift + click chuột phải vào chọn :open command window here
+	 - sau đó gõ lệnh: php artisan server
+	 - mở chình duyệt web lên và gõ:   -  localhost:8000 để vào trang chủ
+									   -  localhost:8000/admin/dangnhap để vào trang đăng nhập admin
+
